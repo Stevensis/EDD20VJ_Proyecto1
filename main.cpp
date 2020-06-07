@@ -20,5 +20,6 @@ int main()
     cout<<"Empresa a buscar"<<endl;
     cin>>dato;
     cout<<(matriz->searchEmpresa(dato)->name)<<endl;
+    matriz->graficarMatriz("Prueba");
     return 0;
 }

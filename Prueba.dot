@@ -1,0 +1,43 @@
+digraph Sparce_Matrix { 
+ node [shape=box];
+-1[ label = "root", width = 1.5, style = filled, color = firebrick1, group = 1 ]; 
+ e0[ shape = point, width = 0 ]; 
+ e1[ shape = point, width = 0 ]; 
+
+ /* Empresas */ 
+1 [label = "max"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
+{ rank = same; 1 ; 0 }
+1 -> 0
+0 -> 1
+e0[ shape = point, width = 0 ];{ rank = same; 1; e0 }
+ /* Empresas */ 
+4 [label = "intelaf"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
+{ rank = same; 4 ; 3 }
+4 -> 3
+3 -> 4
+e1[ shape = point, width = 0 ];{ rank = same; 4; e1 }
+   /* Enlacex entre empresas */ 
+1 -> 4
+4 -> 1
+
+ /* Departamentos */ 
+2 [label = "guatemala"   width = 1.5 style = filled, color = darkolivegreen2, group =2 ];
+0 [label = "pedro" width = 1.5, group = 2 ];
+2 -> 0
+0 -> 2
+
+ /* Departamentos */ 
+5 [label = "Jutiapa"   width = 1.5 style = filled, color = darkolivegreen2, group =3 ];
+3 [label = "juan" width = 1.5, group = 3 ];
+5 -> 3
+3 -> 5
+
+   /* Enlaces entre departamentos */ 
+2 -> 5
+5 -> 2
+5 -> e0 -> e1[ dir = none ];-1 -> 2
+2 -> -1
+-1 -> 1
+1 -> -1
+ { rank = same; -1; 2; 5;  }
+}

@@ -1,4 +1,6 @@
 #include "Matriz.h"
+#include <bits/stdc++.h>
+#include <windows.h>
 
 Matriz::Matriz()
 {
@@ -78,9 +80,9 @@ void Matriz::imprimir(){
     while(temp!=NULL){
         NodoMatriz *temp2= temp;
         temp2=temp2->abajo;
-        cout<<temp->name+"* ";
+        cout<<temp->name + " * " << to_string(temp->contador) + "- ";
         while(temp2!=NULL){
-            cout<<temp2->name+"v";
+            cout<<temp2->name+" v "<< to_string(temp2->contador)+" ";
             temp2=temp2->abajo;
         }
         temp=temp->adelante;
@@ -90,9 +92,9 @@ void Matriz::imprimir(){
     while(temp!=NULL){
         NodoMatriz *temp2= temp;
         temp2=temp2->adelante;
-        cout<<temp->name+"* ";
+        cout<<temp->name+"* "<<to_string(temp->contador)+" ";
         while(temp2!=NULL){
-            cout<<temp2->name+"->";
+            cout<<to_string(temp2->contador)+" "<<temp2->name+"-> ";
             temp2=temp2->adelante;
         }
         temp=temp->abajo;
@@ -118,7 +120,7 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
         user->arriba=departamentoN;
     }else if (empresaN->abajo==NULL){
         NodoMatriz* auxiliar = departamentoN->abajo;
-        while(auxiliar!=NULL){
+        while(auxiliar->abajo!=NULL){
             auxiliar = auxiliar->abajo;
         }
         auxiliar->abajo = user;
@@ -188,6 +190,120 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
         }
     }
 
+}
+
+void Matriz::graficarMatriz(string nombre){
+    NodoMatriz *temp= this->root;
+    string prueba="";
+    ofstream grafica;
+    grafica.open("Prueba.dot", ios::out);
+    grafica << "digraph Sparce_Matrix { \n node [shape=box];\n";
+    prueba+= to_string(temp->contador)+"[ label = \"root\", width = 1.5, style = filled, color = firebrick1, group = 1 ]; \n e0[ shape = point, width = 0 ]; \n e1[ shape = point, width = 0 ]; \n";
+    //escririmos las empresas
+    temp=temp->abajo;
+    //Contador para nodes ficticios
+    int e=0;
+    while(temp!=NULL){
+        prueba+= "\n /* Empresas */ \n";
+        prueba+= to_string(temp->contador) + " [label = \"" + temp->name + "\"    pos = \"5.3,3.5!\" width = 1.5 style = filled, color = coral1, group = 1 ]; \n" ;
+        if(temp->adelante!=NULL){
+            string rankF="{ rank = same; "+to_string(temp->contador);
+            NodoMatriz *tempf= temp->adelante;
+            //Definir las columnas
+            while(tempf!=NULL){
+                rankF+=" ; "+to_string(tempf->contador);
+                tempf= tempf->adelante;
+            }
+            rankF+=" }\n";
+            prueba+=rankF;
+            //Definir enlaces a la derecha
+            tempf= temp->adelante;
+            prueba+= to_string(temp->contador)+" -> "+to_string(tempf->contador)+"\n" ;
+            prueba+= to_string(tempf-> contador)+" -> "+to_string(temp->contador)+"\n" ;
+            while(tempf->adelante!=NULL){
+            prueba+= to_string(tempf->contador)+" -> "+to_string(tempf->adelante->contador)+"\n" ;
+            prueba+= to_string(tempf->adelante->contador)+" -> "+to_string(tempf->contador)+"\n" ;
+            tempf= tempf->adelante;
+            }
+        }
+         prueba+= "e"+to_string(e)+"[ shape = point, width = 0 ];";
+         prueba+= "{ rank = same; "+to_string(temp->contador)+"; e"+to_string(e)+" }";
+        e++;
+        temp=temp->abajo;
+
+    }
+    //apuntadores entre las empresas
+    temp=this->root;
+    temp=temp->abajo;
+    while(temp->abajo!=NULL){
+        prueba+= "\n   /* Enlacex entre empresas */ \n";
+        prueba+= to_string(temp->contador)+" -> "+to_string(temp->abajo->contador)+"\n" ;
+        prueba+= to_string(temp->abajo->contador)+" -> "+to_string(temp->contador)+"\n" ;
+        temp=temp->abajo;
+    }
+
+    //escririmos los departamentos
+    temp=this->root;
+    temp=temp->adelante;
+    int contadorg=1;
+    while(temp!=NULL){
+        contadorg++;
+        prueba+= "\n /* Departamentos */ \n";
+        prueba+= to_string(temp->contador)+ " [label = \""+ temp->name +"\"   width = 1.5 style = filled, color = darkolivegreen2, group ="+to_string(contadorg) +" ];\n";
+        //varificamos hacia abajo para ingresar los nodos dentro de la matriz
+        if(temp->abajo!=NULL){
+            NodoMatriz *tempc= temp->abajo;
+            while(tempc!=NULL){
+                prueba+=to_string(tempc->contador)+" [label = \""+tempc->name+"\" width = 1.5, group = "+to_string(contadorg) +" ];\n";
+                tempc= tempc->abajo;
+            }
+            tempc= temp->abajo;
+            prueba+= to_string(temp->contador)+" -> "+to_string(tempc->contador)+"\n" ;
+            prueba+= to_string(tempc->contador)+" -> "+to_string(temp->contador)+"\n" ;
+            while(tempc->abajo!=NULL){
+                prueba+= to_string(tempc->contador)+" -> "+to_string(tempc->abajo->contador)+"\n" ;
+                prueba+= to_string(tempc->abajo->contador)+" -> "+to_string(tempc->contador)+"\n" ;
+                tempc=tempc->abajo;
+            }
+
+        }
+        temp=temp->adelante;
+    }
+    //apuntadores entre los departamentos
+    temp=this->root;
+    temp=temp->adelante;
+    while(temp->adelante!=NULL){
+        prueba+= "\n   /* Enlaces entre departamentos */ \n";
+        prueba+= to_string(temp->contador)+" -> "+to_string(temp->adelante->contador) +"\n" ;
+        prueba+= to_string(temp->adelante->contador)+" -> "+to_string(temp->contador) +"\n";
+        temp=temp->adelante;
+    }
+    prueba+=to_string(temp->contador) + " -> e0 -> e1[ dir = none ];" ;
+    temp=this->root;
+    //raiz apunta al inicio de los departamentos y las empresas
+    prueba+=to_string(temp->contador)+" -> "+to_string(temp->adelante->contador)+"\n";
+    prueba+=to_string(temp->adelante->contador)+" -> "+to_string(temp->contador)+"\n";
+    prueba+=to_string(temp->contador)+" -> "+to_string(temp->abajo->contador)+"\n";
+    prueba+=to_string(temp->abajo->contador)+" -> "+to_string(temp->contador)+"\n";
+    //decimos que la raiz junto con los departamentos son una fila
+    prueba+=" { rank = same; -1; ";
+    temp=temp->adelante;
+    while(temp!=NULL){
+        prueba+=to_string(temp->contador)+"; ";
+        temp=temp->adelante;
+    }
+    prueba+=" }\n";
+    temp=this->root;
+
+    grafica << prueba;
+    grafica << "}";
+
+    grafica.close();
+
+    string creacion = "dot -Tjpg " + nombre + ".dot -o " + nombre + ".jpg";
+    system(creacion.c_str());
+    string title = nombre  + ".jpg";
+    ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }
 
 Matriz::~Matriz()

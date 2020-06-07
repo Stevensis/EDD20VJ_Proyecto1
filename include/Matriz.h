@@ -16,6 +16,7 @@ class Matriz
 
         void imprimir();
         void insertarNodoMatriz(string name,string empresa,string departamento,int contador);
+        void graficarMatriz(string nombre);
         NodoMatriz* createEmpresa(string name);
         NodoMatriz* createDepartamento(string name);
         NodoMatriz* searchEmpresa(string name);
