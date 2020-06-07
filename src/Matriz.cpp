@@ -110,6 +110,29 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
     //Verificamos si la empresa ya existe
     empresaN= this->searchEmpresa(empresa);
     departamentoN = this->searchDepartamento(departamento);
+    //Verificamos si existen la empresa y el departamento porque si existen puede que este nodo ya exista
+    if(empresaN!=NULL && departamentoN!=NULL){
+        NodoMatriz *tempE=empresaN->adelante;
+        //recorremos cada nodo siguiente de la empresa
+        while(tempE!=NULL){
+            //recorremos hacia arriba para verificar la empresa
+            NodoMatriz *tempD=tempE->arriba;
+            while(tempD->arriba!=NULL){
+                tempD=tempD->arriba;
+            }
+            if(tempD->name==departamento){
+                NodoMatriz *tempU=tempE;
+                while(tempU->padentro!=NULL){
+                    tempU=tempU->padentro;
+                }
+                tempU->padentro=user;
+                user->paenfrente=tempU;
+                return;
+            }
+            tempE=tempE->adelante;
+
+        }
+    }
     //Verificamos si las empresas o departamentos existen
     if(empresaN==NULL){ empresaN = this->createEmpresa(empresa); }
     if(departamentoN==NULL){ departamentoN = this->createDepartamento(departamento); }
@@ -192,6 +215,10 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
 
 }
 
+bool Matriz::verificarExistencia(NodoMatriz* emp,NodoMatriz* dep){
+
+}
+
 void Matriz::graficarMatriz(string nombre){
     NodoMatriz *temp= this->root;
     string prueba="";
@@ -254,7 +281,14 @@ void Matriz::graficarMatriz(string nombre){
         if(temp->abajo!=NULL){
             NodoMatriz *tempc= temp->abajo;
             while(tempc!=NULL){
-                prueba+=to_string(tempc->contador)+" [label = \""+tempc->name+"\" width = 1.5, group = "+to_string(contadorg) +" ];\n";
+                //recorre la lista de usuarios
+                string usuarios="";
+                NodoMatriz *tempU = tempc;
+                while(tempU!=NULL){
+                usuarios+="<tr><td>"+ tempU->name +"</td></tr>";
+                tempU=tempU->padentro;
+                }
+                prueba+=to_string(tempc->contador)+" [label = <<table border = \"0\">"+usuarios+"</table>>, width = 1.5, group = "+to_string(contadorg) +" ];\n";
                 tempc= tempc->abajo;
             }
             tempc= temp->abajo;

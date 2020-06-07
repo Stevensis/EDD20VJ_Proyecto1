@@ -6,6 +6,8 @@ NodoMatriz::NodoMatriz(string n, int c)
     this->arriba = NULL;
     this->adelante = NULL;
     this->atras = NULL;
+    this->padentro=NULL;
+    this->paenfrente=NULL;
     this->name = n;
     this-> contador =c;
 }

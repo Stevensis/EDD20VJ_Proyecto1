@@ -17,6 +17,7 @@ class Matriz
         void imprimir();
         void insertarNodoMatriz(string name,string empresa,string departamento,int contador);
         void graficarMatriz(string nombre);
+        bool verificarExistencia(NodoMatriz* emp,NodoMatriz* dep);
         NodoMatriz* createEmpresa(string name);
         NodoMatriz* createDepartamento(string name);
         NodoMatriz* searchEmpresa(string name);

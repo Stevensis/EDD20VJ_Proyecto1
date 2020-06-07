@@ -11,6 +11,8 @@ class NodoMatriz
         NodoMatriz *adelante;
         NodoMatriz *arriba;
         NodoMatriz *abajo;
+        NodoMatriz *paenfrente;
+        NodoMatriz *padentro;
         string name;
         int contador;
         NodoMatriz(string n, int c);
