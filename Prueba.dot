@@ -11,46 +11,26 @@ digraph Sparce_Matrix {
 0 -> 1
 e0[ shape = point, width = 0 ];{ rank = same; 1; e0 }
  /* Empresas */ 
-5 [label = "intelaf"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
-{ rank = same; 5 ; 4 }
-5 -> 4
-4 -> 5
-e1[ shape = point, width = 0 ];{ rank = same; 5; e1 }
- /* Empresas */ 
-9 [label = "macro"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
-{ rank = same; 9 ; 8 }
-9 -> 8
-8 -> 9
-e2[ shape = point, width = 0 ];{ rank = same; 9; e2 }
+4 [label = "intelaf"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
+{ rank = same; 4 ; 3 }
+4 -> 3
+3 -> 4
+e1[ shape = point, width = 0 ];{ rank = same; 4; e1 }
    /* Enlacex entre empresas */ 
-1 -> 5
-5 -> 1
-
-   /* Enlacex entre empresas */ 
-5 -> 9
-9 -> 5
+1 -> 4
+4 -> 1
 
  /* Departamentos */ 
 2 [label = "Guatemala"   width = 1.5 style = filled, color = darkolivegreen2, group =2 ];
-0 [label = <<table border = "0"><tr><td>Pedro</td></tr><tr><td>Juan</td></tr></table>>, width = 1.5, group = 2 ];
-8 [label = <<table border = "0"><tr><td>Maria</td></tr></table>>, width = 1.5, group = 2 ];
+0 [label = <<table border = "0"><tr><td>Steven Sis</td></tr></table>>, width = 1.5, group = 2 ];
+3 [label = <<table border = "0"><tr><td>Pedro Ordonez</td></tr></table>>, width = 1.5, group = 2 ];
 2 -> 0
 0 -> 2
-0 -> 8
-8 -> 0
-
- /* Departamentos */ 
-6 [label = "Xela"   width = 1.5 style = filled, color = darkolivegreen2, group =3 ];
-4 [label = <<table border = "0"><tr><td>Kevin</td></tr><tr><td>Pablo</td></tr></table>>, width = 1.5, group = 3 ];
-6 -> 4
-4 -> 6
-
-   /* Enlaces entre departamentos */ 
-2 -> 6
-6 -> 2
-6 -> e0 -> e1[ dir = none ];-1 -> 2
+0 -> 3
+3 -> 0
+2 -> e0 -> e1[ dir = none ];-1 -> 2
 2 -> -1
 -1 -> 1
 1 -> -1
- { rank = same; -1; 2; 6;  }
+ { rank = same; -1; 2;  }
 }

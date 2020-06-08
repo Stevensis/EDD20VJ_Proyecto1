@@ -4,13 +4,13 @@
 
 Matriz::Matriz()
 {
-    this->root = new NodoMatriz("root",-1);
+    this->root = new NodoMatriz("root",-1,"admin","admin");
     this->contadorN = 0;
 }
 
 //las empresas de insertan hacia abajo
 NodoMatriz* Matriz::createEmpresa(string name){
-    NodoMatriz* empresaC = new NodoMatriz(name,contadorN++);
+    NodoMatriz* empresaC = new NodoMatriz(name,contadorN++,"","");
 
     NodoMatriz* temp = this->root;
     while(temp->abajo!=NULL){
@@ -24,7 +24,7 @@ NodoMatriz* Matriz::createEmpresa(string name){
 
 //Los departamentos se insertan hacia adelante
 NodoMatriz* Matriz::createDepartamento(string name){
-    NodoMatriz* departamentoC = new NodoMatriz(name,contadorN++);
+    NodoMatriz* departamentoC = new NodoMatriz(name,contadorN++,"","");
 
     NodoMatriz* temp = this->root;
     while(temp->adelante!=NULL){
@@ -101,12 +101,12 @@ void Matriz::imprimir(){
     }
 }
 
-void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,int contador){
+void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,string nameuser,string password,int contador){
     NodoMatriz *user;
     NodoMatriz *empresaN;
     NodoMatriz *departamentoN;
     //Esto solo sera ahorita
-    user = new NodoMatriz(name,contador++);
+    user = new NodoMatriz(name,contador++,nameuser,password);
     //Verificamos si la empresa ya existe
     empresaN= this->searchEmpresa(empresa);
     departamentoN = this->searchDepartamento(departamento);
@@ -122,8 +122,10 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
             }
             if(tempD->name==departamento){
                 NodoMatriz *tempU=tempE;
+                if(tempU->nameuser==user->nameuser){cout<<"usuario ya existenete\n"; return;}
                 while(tempU->padentro!=NULL){
                     tempU=tempU->padentro;
+                    if(tempU->nameuser==user->nameuser){cout<<"usuario ya existenete\n"; return;}
                 }
                 tempU->padentro=user;
                 user->paenfrente=tempU;
@@ -215,8 +217,35 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,i
 
 }
 
-bool Matriz::verificarExistencia(NodoMatriz* emp,NodoMatriz* dep){
+NodoMatriz* Matriz::existe(string user,string departamento,string empresa)
+{
+    NodoMatriz *userR=NULL;
+    NodoMatriz *empresaN;
+    NodoMatriz *departamentoN;
+    empresaN= this->searchEmpresa(empresa);
+    departamentoN = this->searchDepartamento(departamento);
+    if(empresaN!=NULL && departamentoN!=NULL){
+        NodoMatriz *tempE=empresaN->adelante;
+        //recorremos cada nodo siguiente de la empresa
+        while(tempE!=NULL){
+            //recorremos hacia arriba para verificar la empresa
+            NodoMatriz *tempD=tempE->arriba;
+            while(tempD->arriba!=NULL){
+                tempD=tempD->arriba;
+            }
+            if(tempD->name==departamento){
+                NodoMatriz *tempU=tempE;
+                if(tempU->nameuser==user){cout<<"usuario ya existenete\n"; return tempU;}
+                while(tempU->padentro!=NULL){
+                    tempU=tempU->padentro;
+                    if(tempU->nameuser==user){cout<<"usuario ya existenete\n"; return tempU;}
+                }
+            }
+            tempE=tempE->adelante;
 
+        }
+    }
+    return userR;
 }
 
 void Matriz::graficarMatriz(string nombre){

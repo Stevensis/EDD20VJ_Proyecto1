@@ -14,8 +14,10 @@ class NodoMatriz
         NodoMatriz *paenfrente;
         NodoMatriz *padentro;
         string name;
+        string nameuser;
+        string password;
         int contador;
-        NodoMatriz(string n, int c);
+        NodoMatriz(string n, int c,string nu,string pa);
         virtual ~NodoMatriz();
 
 

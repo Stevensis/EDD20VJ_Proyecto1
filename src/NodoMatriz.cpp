@@ -1,6 +1,6 @@
 #include "NodoMatriz.h"
 
-NodoMatriz::NodoMatriz(string n, int c)
+NodoMatriz::NodoMatriz(string n, int c,string nu,string pa)
 {
     this->abajo = NULL;
     this->arriba = NULL;
@@ -10,6 +10,8 @@ NodoMatriz::NodoMatriz(string n, int c)
     this->paenfrente=NULL;
     this->name = n;
     this-> contador =c;
+    this->nameuser = nu;
+    this->password=pa;
 }
 
 NodoMatriz::~NodoMatriz()

@@ -15,9 +15,9 @@ class Matriz
         virtual ~Matriz();
 
         void imprimir();
-        void insertarNodoMatriz(string name,string empresa,string departamento,int contador);
+        void insertarNodoMatriz(string name,string empresa,string departamento,string nameuser,string password,int contador);
         void graficarMatriz(string nombre);
-        bool verificarExistencia(NodoMatriz* emp,NodoMatriz* dep);
+        NodoMatriz* existe(string user,string departamento,string empresa);
         NodoMatriz* createEmpresa(string name);
         NodoMatriz* createDepartamento(string name);
         NodoMatriz* searchEmpresa(string name);

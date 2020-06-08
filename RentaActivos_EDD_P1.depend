@@ -1,27 +1,40 @@
 # depslib dependency file v1.0
-1591499338 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\main.cpp
+1591586017 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceadmin.cpp
+	"InterfaceAdmin.h"
 	<iostream>
-	"Matriz.h"
+	<string>
 
-1591558682 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\matriz.h
+1591591515 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceadmin.h
+	"Matriz.h"
+	<string>
+	<iostream>
+
+1591590971 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\matriz.h
 	"NodoMatriz.h"
 	<string>
 	<iostream>
 
-1591559161 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\nodomatriz.h
+1591568565 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\nodomatriz.h
 	<string>
 	<iostream>
+
+1591591812 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceuser.cpp
+	"InterfaceUser.h"
+
+1591591522 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceuser.h
+	"Matriz.h"
+	"NodoMatriz.h"
 
 1591369513 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\listadoblecircular.cpp
 	"ListaDobleCircular.h"
 
 1591369513 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\listadoblecircular.h
 
-1591563313 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\matriz.cpp
+1591591086 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\matriz.cpp
 	"Matriz.h"
 	<bits/stdc++.h>
 	<windows.h>
 
-1591559175 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\nodomatriz.cpp
+1591568604 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\nodomatriz.cpp
 	"NodoMatriz.h"
 
