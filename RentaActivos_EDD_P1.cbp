@@ -38,13 +38,17 @@
 		<Unit filename="include/InterfaceUser.h" />
 		<Unit filename="include/ListaDobleCircular.h" />
 		<Unit filename="include/Matriz.h" />
+		<Unit filename="include/NodoActivo.h" />
 		<Unit filename="include/NodoMatriz.h" />
+		<Unit filename="include/TreeAvl.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/InterfaceAdmin.cpp" />
 		<Unit filename="src/InterfaceUser.cpp" />
 		<Unit filename="src/ListaDobleCircular.cpp" />
 		<Unit filename="src/Matriz.cpp" />
+		<Unit filename="src/NodoActivo.cpp" />
 		<Unit filename="src/NodoMatriz.cpp" />
+		<Unit filename="src/TreeAvl.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -9,6 +9,7 @@ int main()
 {
     cout << "-----Renta de activos--------!" << endl;
     Matriz *matriz = new Matriz();
+    matriz->insertarNodoMatriz("steven","max","Guatemala","steven","steven098",matriz->contadorN++);
     InterfaceUser *user = new InterfaceUser(matriz);
     InterfaceAdmin *admin = new InterfaceAdmin(matriz);
     string dato,empresa,departamento,nameuser,password;
@@ -40,18 +41,6 @@ int main()
 
     }while(menu1);
 
-    getline(cin, dato);
-    do{
-        cin>>empresa;
-        cin>>departamento;
-        cout<<"----";
-        matriz->insertarNodoMatriz(dato,empresa,departamento,nameuser,password, matriz->contadorN++);
-        cin>>dato;
-    }while(dato!="p");
-    matriz->imprimir();
-    cout<<"Empresa a buscar"<<endl;
-    cin>>dato;
-    cout<<(matriz->searchEmpresa(dato)->name)<<endl;
-    matriz->graficarMatriz("Prueba");
+
     return 0;
 }

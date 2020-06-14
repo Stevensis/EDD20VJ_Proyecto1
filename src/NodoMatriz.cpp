@@ -12,6 +12,7 @@ NodoMatriz::NodoMatriz(string n, int c,string nu,string pa)
     this-> contador =c;
     this->nameuser = nu;
     this->password=pa;
+    this->treeAvl= new TreeAvl();
 }
 
 NodoMatriz::~NodoMatriz()

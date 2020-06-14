@@ -49,7 +49,7 @@ void InterfaceAdmin::menu2(){
     bool menu02=true;
     do{
             cout << "----- 1. Registro Usuario --------!" << endl;
-            cout << "----- 2. Registro de Matriz --------!" << endl;
+            cout << "----- 2. Reporte de Matriz --------!" << endl;
             cout << "----- 3. Reporte Activos Disponibles de un Departamento --------!" << endl;
             cout << "----- 4. Reporte Activos Disponibles de una Empresa--------!" << endl;
             cout << "----- 5. Reporte Transacciones --------!" << endl;

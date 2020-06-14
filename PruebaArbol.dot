@@ -1,0 +1,6 @@
+digraph Sparce_Matrix { 
+node [height=0.5, width=1.2];
+"2o85v971hab5nfj" [label=" 2o85v971hab5nfj,jabon",color=green] 
+"c856e9yj1fewwvw" [label=" c856e9yj1fewwvw,leche",color=green] 
+"c856e9yj1fewwvw" -> "2o85v971hab5nfj" 
+}

@@ -2,6 +2,7 @@
 #define NODOMATRIZ_H
 #include <string>
 #include <iostream>
+#include "TreeAvl.h"
 using namespace std;
 
 class NodoMatriz
@@ -13,6 +14,8 @@ class NodoMatriz
         NodoMatriz *abajo;
         NodoMatriz *paenfrente;
         NodoMatriz *padentro;
+        TreeAvl     *treeAvl;
+
         string name;
         string nameuser;
         string password;

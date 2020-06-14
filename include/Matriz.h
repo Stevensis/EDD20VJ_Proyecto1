@@ -1,6 +1,7 @@
 #ifndef MATRIZ_H
 #define MATRIZ_H
 #include "NodoMatriz.h"
+#include "NodoActivo.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -22,6 +23,7 @@ class Matriz
         NodoMatriz* createDepartamento(string name);
         NodoMatriz* searchEmpresa(string name);
         NodoMatriz* searchDepartamento(string name);
+        NodoActivo* serachActivo(string id);
     protected:
 
     private:
