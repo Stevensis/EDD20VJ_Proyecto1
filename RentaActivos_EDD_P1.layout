@@ -7,53 +7,9 @@
 			<Cursor1 position="73" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\InterfaceAdmin.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\InterfaceUser.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3265" topLine="78" />
-		</Cursor>
-	</File>
-	<File name="include\TreeAvl.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="263" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\NodoActivo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="339" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\InterfaceUser.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="490" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="310" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="src\Matriz.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="11" />
-			<Collapse line="25" />
-			<Collapse line="39" />
-			<Collapse line="50" />
-			<Collapse line="61" />
-			<Collapse line="103" />
-			<Collapse line="220" />
-		</Folding>
-	</File>
-	<File name="src\TreeAvl.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3867" topLine="101" />
-		</Cursor>
-	</File>
-	<File name="src\InterfaceUser.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3444" topLine="95" />
+			<Cursor1 position="488" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\NodoActivo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -66,14 +22,79 @@
 			<Cursor1 position="378" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Matriz.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="805" topLine="0" />
+			<Cursor1 position="310" topLine="4" />
 		</Cursor>
 	</File>
-	<File name="include\NodoMatriz.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\TreeAvl.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4665" topLine="18" />
+		</Cursor>
+		<Folding>
+			<Collapse line="18" />
+			<Collapse line="59" />
+			<Collapse line="68" />
+			<Collapse line="76" />
+			<Collapse line="84" />
+			<Collapse line="88" />
+			<Collapse line="93" />
+			<Collapse line="102" />
+			<Collapse line="109" />
+			<Collapse line="128" />
+			<Collapse line="147" />
+			<Collapse line="175" />
+			<Collapse line="200" />
+		</Folding>
+	</File>
+	<File name="include\ListaDobleCircular.h" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="137" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\NodoActivo.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="226" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\InterfaceAdmin.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3265" topLine="78" />
+		</Cursor>
+	</File>
+	<File name="src\InterfaceUser.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="203" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="96" />
+			<Collapse line="154" />
+		</Folding>
+	</File>
+	<File name="include\NodoMatriz.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="375" topLine="0" />
 		</Cursor>
+	</File>
+	<File name="include\TreeAvl.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="84" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Matriz.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="771" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Matriz.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14048" topLine="16" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="25" />
+			<Collapse line="39" />
+			<Collapse line="50" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

@@ -18,6 +18,8 @@ class InterfaceUser
         void menu();
         void menu02();
         void agregarActivo();
+        void eliminarActivo();
+        void modificarActivo();
         void graficar(string cuerpo);
         string idActivo();
         InterfaceUser(Matriz* ma);

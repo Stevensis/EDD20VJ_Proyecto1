@@ -111,9 +111,9 @@ void TreeAvl::cuerpoArbol(NodoActivo *temp){
     if(temp!=NULL){
         this->cuerpoArbol(temp->izquierda);
         if(temp->estado){
-            this->cuerpoArbolDot+= "\""+ temp->id + "\" [label=\" "+ temp->id +"," + temp->nombre + "\",color=green] \n";
+            this->cuerpoArbolDot+= "\""+ temp->id + "\" [label=\" "+ temp->id +",\\n" + temp->nombre + "\",color=green] \n";
         }else{
-            this->cuerpoArbolDot+= "\""+ temp->id + "\" [label=\" "+ temp->id +"," + temp->nombre + "\",color=red] \n";
+            this->cuerpoArbolDot+= "\""+ temp->id + "\" [label=\" "+ temp->id +",\\n" + temp->nombre + "\",color=red] \n";
         }
 
         if(temp->derecha!=NULL){
@@ -134,6 +134,76 @@ void TreeAvl::preorder(NodoActivo *raiz){
     preorder(raiz->derecha);
 }
 
+void TreeAvl::enorder(NodoActivo *raiz){
+    if(raiz==NULL){return;}
+
+    enorder(raiz->izquierda);
+    if(raiz->estado){
+        cout<<"-*- Id: "<<raiz->id<<"; nombre: "<<raiz->nombre<<endl;
+    }
+    enorder(raiz->derecha);
+}
+
+//Para eliminar
+NodoActivo* TreeAvl::eliminar(NodoActivo* raiz,string dato){
+    if(raiz == NULL){
+        return raiz;
+    }
+
+    if(dato<raiz->id){
+        raiz->izquierda = eliminar(raiz->izquierda,dato);
+    }else if(dato>raiz->id){
+        raiz ->derecha = eliminar(raiz->derecha,dato);
+    }else{
+        if(raiz->izquierda==NULL){
+            return raiz->derecha;
+        }else if(raiz->derecha==NULL){
+            return raiz->izquierda;
+        }else{
+            NodoActivo* ordenar0=inorderE(raiz->derecha);
+            raiz->id= ordenar0->id;
+            raiz->descripcion=ordenar0->descripcion;
+            raiz->estado=ordenar0->estado;
+            raiz->nombre=ordenar0->nombre;
+            raiz->derecha=eliminar(raiz->derecha,raiz->id);
+        }
+
+    }
+    raiz=this->valancear(raiz,dato);
+    return raiz;
+}
+
+NodoActivo* TreeAvl::valancear(NodoActivo *raiz,string datoE){
+    if((Altura(raiz->izquierda) - Altura(raiz->derecha))==2){
+            if(raiz->id>raiz->izquierda->id){
+                    //va rotar a la izquierda
+                raiz= simplederechaizquierda(raiz);
+            //si sigue des equilibrado va rotar doble
+                if( (Altura(raiz->derecha) - Altura(raiz->izquierda))==2){
+                raiz= doblederechaderecha(raiz);
+                }
+            }else{
+                raiz= doblederechaizquierda(raiz);
+            }
+    }else if( (Altura(raiz->derecha) - Altura(raiz->izquierda))==2){
+            if(raiz->id<raiz->derecha->id){
+                raiz= simplederechaderecha(raiz);
+                if((Altura(raiz->izquierda) - Altura(raiz->derecha))==2){
+                    raiz= doblederechaizquierda(raiz);
+                }
+            }else{
+                raiz= doblederechaderecha(raiz);
+            }
+        }
+    return raiz;
+}
+
+NodoActivo* TreeAvl::inorderE(NodoActivo* right){
+    while(right->izquierda!=NULL){
+        right= right->izquierda;
+    }
+    return right;
+}
 
 TreeAvl::~TreeAvl()
 {

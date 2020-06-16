@@ -3,6 +3,7 @@
 ListaDobleCircular::ListaDobleCircular()
 {
     //ctor
+    this->primero=NULL;
 }
 
 ListaDobleCircular::~ListaDobleCircular()

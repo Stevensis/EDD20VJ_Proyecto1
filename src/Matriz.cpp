@@ -369,6 +369,29 @@ void Matriz::graficarMatriz(string nombre){
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }
 
+NodoActivo* Matriz::serachActivo(string id){
+    NodoMatriz* tempNM= this->root->adelante;
+    //recoremos los departamentos, para esto nos vamos de la raiz por todos adelabte
+    while(tempNM!=NULL){
+        //recorremos los nodos usuarios
+        NodoMatriz* tempU= tempNM->abajo;
+        while(tempU!=NULL){
+                //recorremos el mismo nodo pero para adentro con los demas usuarios, si es que tiene
+                NodoMatriz* tempU2=tempU;
+                while(tempU2!=NULL){
+                    NodoActivo* activo= tempU2->treeAvl->searchroot(tempU2->treeAvl->root,id);
+                    if(activo!=NULL){
+                            return activo;
+                    }
+                    tempU2=tempU2->padentro;
+                }
+            tempU=tempU->abajo;
+        }
+        tempNM=tempNM->adelante;
+    }
+    return NULL;
+}
+
 Matriz::~Matriz()
 {
     //dtor

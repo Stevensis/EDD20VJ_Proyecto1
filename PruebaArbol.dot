@@ -1,6 +1,8 @@
 digraph Sparce_Matrix { 
 node [height=0.5, width=1.2];
-"2o85v971hab5nfj" [label=" 2o85v971hab5nfj,jabon",color=green] 
-"c856e9yj1fewwvw" [label=" c856e9yj1fewwvw,leche",color=green] 
-"c856e9yj1fewwvw" -> "2o85v971hab5nfj" 
+"f01l9v2yqmca72z" [label=" f01l9v2yqmca72z,\ncafe",color=green] 
+"lk4bae6jx7batm9" [label=" lk4bae6jx7batm9,\nleche",color=green] 
+"lk4bae6jx7batm9" -> "yyq9x3saz6on54k" 
+"lk4bae6jx7batm9" -> "f01l9v2yqmca72z" 
+"yyq9x3saz6on54k" [label=" yyq9x3saz6on54k,\nnaranja",color=green] 
 }

@@ -8,9 +8,10 @@ InterfaceUser::InterfaceUser(Matriz* ma)
 }
 
 void InterfaceUser::menu(){
-    cin.ignore();
+
     bool menu01=true;
     do{
+        cin.ignore();
         cout << "**-----         Login        --------**!" << endl;
         cout << "----- Ingrese usuario --------!" << endl;
         string user,password,departamento,empresa;
@@ -58,8 +59,10 @@ void InterfaceUser::menu02(){
             this->agregarActivo();
             break;
         case 2:
+            this->eliminarActivo();
             break;
         case 3:
+            this->modificarActivo();
             break;
         case 4:
             break;
@@ -71,19 +74,23 @@ void InterfaceUser::menu02(){
             option02=false;
             break;
         }
+        this->graficar(this->userE->treeAvl->graficarArbol());
     }while(option02);
 }
 
 void InterfaceUser::agregarActivo(){
     cin.ignore();
     string nombre,descripcion,id;
+    NodoActivo* verificar;
     cout << ">> Ingresar Nombre  --------!" << endl;
     getline(cin,nombre);
     cout << ">> Ingresar Descripcion --------!" << endl;
     getline(cin,descripcion);
-    id=this->idActivo();
+    do{
+       id=this->idActivo();
+       verificar=this->m->serachActivo(id);
+    }while(verificar!=NULL);
     this->userE->treeAvl->root=this->userE->treeAvl->insertar(this->userE->treeAvl->root,id,nombre,descripcion);
-    this->graficar(this->userE->treeAvl->graficarArbol());
     this->userE->treeAvl->preorder(this->userE->treeAvl->root);
 }
 
@@ -101,6 +108,48 @@ void InterfaceUser::graficar(string cuerpo){
     system(creacion.c_str());
     string title = nombre  + ".jpg";
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
+}
+
+void InterfaceUser::eliminarActivo(){
+    cin.ignore();
+    //imprime el arbol de menor a mayor
+    string idA;
+    cout<<"\n Se muestran los Activos disponibles a eliminar, los que estan rentados no aparecen en esta lista"<<endl;
+    this->userE->treeAvl->enorder(this->userE->treeAvl->root);
+    cout<<"\n..- Ingrese el id del activo a eliminar \n";
+    getline(cin,idA);
+    NodoActivo* activoE=this->m->serachActivo(idA);
+    if(activoE!=NULL){
+            cout<<"-*- Activo Eliminado"<<endl;
+            cout<<"-*- Id: "<< activoE->id <<endl;
+            cout<<"-*- Nombre: "<< activoE->nombre <<endl;
+            cout<<"-*- descripcion: "<< activoE->descripcion <<endl;
+        this->userE->treeAvl->root= this->userE->treeAvl->eliminar(this->userE->treeAvl->root,idA);
+    }else{
+        cout<<"No existe un activo con este id"<<endl;
+    }
+}
+
+void InterfaceUser::modificarActivo(){
+    cin.ignore();
+    //imprime el arbol de menor a mayor
+    string idA,descropcionN;
+    cout<<"\n Se muestran los Activos disponibles a modificar, los que estan rentados no aparecen en esta lista"<<endl;
+    this->userE->treeAvl->enorder(this->userE->treeAvl->root);
+    cout<<"\n..- Ingrese el id del activo a moficar \n";
+    getline(cin,idA);
+    NodoActivo* activoM=this->m->serachActivo(idA);
+    if(activoM!=NULL){
+            cout<<"-*- descripcion: "<< activoM->descripcion <<endl;
+            cout<<"\n..- la nueva descripcion \n";
+            getline(cin,descropcionN);
+            activoM->descripcion=descropcionN;
+            cout<<"\n..- activo modificado \n";
+            cout<<"-*- Id: "<<activoM->id<<"; nombre: "<<activoM->nombre<< "; Descripcion: " << activoM->descripcion << "\n" << endl;
+
+    }else{
+        cout<<"No existe un activo con este id"<<endl;
+    }
 }
 
 string InterfaceUser::idActivo(){
