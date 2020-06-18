@@ -20,6 +20,7 @@ int main()
     matriz->insertarNodoMatriz("pedro","intelaf","Xela","pedro","pedro098",matriz->contadorN++);
     matriz->insertarNodoMatriz("juan","chiquita","Xela","juan","juan098",matriz->contadorN++);
     matriz->insertarNodoMatriz("jose","max","Guatemala","jose","joses098",matriz->contadorN++);
+    matriz->insertarNodoMatriz("pepe","chiquita","Xela","pepe","pepe098",matriz->contadorN++);
     NodoMatriz* user1 = matriz->existe("steven","Guatemala","max");
     NodoMatriz* user2 = matriz->existe("pedro","Xela","intelaf");
     NodoMatriz* user3 = matriz->existe("juan","Xela","chiquita");
@@ -43,12 +44,12 @@ int main()
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"Azul","color");conta++;
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"naranja","la fruta o el color");conta++;
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"rojo","el color");conta++;
-    user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"cafe","pa tomar");conta++;
+    user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"cafe","el color");conta++;
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"negra","tengo la camisa");conta++;
 
 
     InterfaceUser *user = new InterfaceUser(matriz,transacciones);
-    InterfaceAdmin *admin = new InterfaceAdmin(matriz);
+    InterfaceAdmin *admin = new InterfaceAdmin(matriz,transacciones);
 
     string dato,empresa,departamento,nameuser,password;
     cout << " " << endl;

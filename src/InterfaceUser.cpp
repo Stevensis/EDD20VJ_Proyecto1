@@ -5,6 +5,8 @@ InterfaceUser::InterfaceUser(Matriz* ma,ListaDobleCircular* tra)
     this->m=ma;
     this->userE=NULL;
     this->transacciones=tra;
+    this->empre=NULL;
+    this->depar=NULL;
     //ctor
 }
 
@@ -25,6 +27,8 @@ void InterfaceUser::menu(){
         getline(cin,empresa);
         this->userE=this->m->existe(user,departamento,empresa);
         if(userE!=NULL && userE->password==password){
+            this->empre=this->m->searchEmpresa(empresa);
+            this->depar=this->m->searchDepartamento(departamento);
             cout<<"Welcome "+userE->name<<endl;
             this->menu02();
         }else{
@@ -99,8 +103,8 @@ void InterfaceUser::rentarActivo(){
         cout<<"... Ingrese fecha a rentar \n";
         getline(cin,fecha);
         rentado->estado=false;
-        this->transacciones->InsertarTransaccion(id,rentado,this->userE,fecha,dias,this->transacciones->primero,true);
-        this->transacciones->grafoGeneral();
+        this->transacciones->InsertarTransaccion(id,rentado,this->userE,fecha,dias,this->transacciones->primero,true,this->depar,this->empre);
+      //  this->transacciones->grafoGeneral();
     }else{
         cout<<"... No se encontro ID\n";
     }

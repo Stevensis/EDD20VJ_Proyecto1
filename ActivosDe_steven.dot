@@ -1,0 +1,12 @@
+digraph G { 
+
+ label=" User: steven"
+node [height=0.5, width=1.2];
+"0hvtj9ccyitqxlp" [label=" 0hvtj9ccyitqxlp,\nChai",color=green] 
+"b8klc1zao2izwqf" [label=" b8klc1zao2izwqf,\nte",color=green] 
+"b8klc1zao2izwqf" -> "0hvtj9ccyitqxlp" 
+"hukbagyt4uzkwhg" [label=" hukbagyt4uzkwhg,\nte frio",color=green] 
+"hukbagyt4uzkwhg" -> "qk6la4mtph58wck" 
+"hukbagyt4uzkwhg" -> "b8klc1zao2izwqf" 
+"qk6la4mtph58wck" [label=" qk6la4mtph58wck,\nleche",color=red] 
+}

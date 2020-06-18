@@ -17,6 +17,8 @@ class InterfaceUser
     public:
         Matriz* m;
         NodoMatriz *userE;
+        NodoMatriz *empre;
+        NodoMatriz *depar;
         ListaDobleCircular *transacciones;
         void menu();
         void menu02();

@@ -6,8 +6,8 @@ ListaDobleCircular::ListaDobleCircular()
     this->primero=NULL;
 }
 
-void ListaDobleCircular::InsertarTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoTransaccion* n, bool v){
-    NodoTransaccion* temp = new NodoTransaccion(i,ac,ma,fe,di);
+void ListaDobleCircular::InsertarTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoTransaccion* n, bool v,NodoMatriz* de,NodoMatriz* emp){
+    NodoTransaccion* temp = new NodoTransaccion(i,ac,ma,fe,di,de,emp);
 
     if(this->primero==NULL){
         this->primero=temp;
@@ -30,10 +30,10 @@ void ListaDobleCircular::grafoGeneral(){
     string cuerpo="";
     ofstream grafica;
     grafica.open("PruebaListaCircular.dot", ios::out);
-    grafica << "digraph  { \n nodesep=.05; \n rankdir=LR; \n node [shape=record,width=.5,height=2.5]; \n";
+    grafica << "digraph  { \n nodesep=.05; \n rankdir=LR; \n node [shape=record,width=.5,height=2.5]; \n label=\"Reporte General\"; \n";
     NodoTransaccion* temp=this->primero;
     do{
-        cuerpo+="\"" + temp->id + "\" [label=\" "+ temp->id +",\\n D: " + temp->departamento + ",E:"+  temp->empresa +",\\n T: "+temp->dias +", F: "+temp->fecha+",\\n U: "+temp->usuario->name + ",\\n A: "+temp->activo->nombre + "\"] \n";
+        cuerpo+="\"" + temp->id + "\" [label=\" "+ temp->id +",\\n D: " + temp->departamento->name + ",E:"+  temp->empresa->name +",\\n T: "+temp->dias +", F: "+temp->fecha+",\\n U: "+temp->usuario->name + ",\\n A: "+temp->activo->nombre + ", : "+ to_string(temp->activo->estado) + ",\\n A: "+temp->activo->id + "\"] \n";
         cuerpo+= "\"" + temp->id +"\" -> \""+temp->siguiente->id+"\"";
         cuerpo+= "\"" + temp->id +"\" -> \""+temp->anterior->id+"\"";
         temp=temp->siguiente;

@@ -9,7 +9,7 @@ class ListaDobleCircular
     public:
         ListaDobleCircular();
         NodoTransaccion*  primero;
-        void InsertarTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoTransaccion* n, bool v);
+        void InsertarTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoTransaccion* n, bool v,NodoMatriz* de,NodoMatriz* emp);
         void grafoGeneral();
         NodoTransaccion* buscarTransicion(string id);
         virtual ~ListaDobleCircular();

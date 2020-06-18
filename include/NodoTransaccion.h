@@ -12,11 +12,11 @@ class NodoTransaccion
         NodoMatriz* usuario;
         string fecha;
         string dias;
-        string empresa;
-        string departamento;
+        NodoMatriz*  empresa;
+        NodoMatriz*  departamento;
         NodoTransaccion* siguiente;
         NodoTransaccion* anterior;
-        NodoTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di);
+        NodoTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoMatriz* de,NodoMatriz* emp);
         virtual ~NodoTransaccion();
 
     protected:

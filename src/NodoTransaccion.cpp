@@ -1,6 +1,6 @@
 #include "NodoTransaccion.h"
 
-NodoTransaccion::NodoTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di)
+NodoTransaccion::NodoTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoMatriz* de,NodoMatriz* emp)
 {
     this->id=i;
     this->activo=ac;
@@ -9,16 +9,9 @@ NodoTransaccion::NodoTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, strin
     this->fecha=fe;
     this->dias=di;
 
-    NodoMatriz* temp= this->usuario->arriba;
-    while(temp->arriba!=NULL){
-        temp= temp->arriba;
-    }
-    this->departamento=temp->name;
-    temp=this->usuario->atras;
-    while(temp->atras!=NULL){
-        temp= temp->atras;
-    }
-    this->empresa=temp->name;
+    this->departamento=de;
+
+    this->empresa=emp;
 }
 
 NodoTransaccion::~NodoTransaccion()

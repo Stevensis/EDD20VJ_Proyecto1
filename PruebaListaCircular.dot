@@ -2,5 +2,11 @@ digraph  {
  nodesep=.05; 
  rankdir=LR; 
  node [shape=record,width=.5,height=2.5]; 
-"cmx3mvieiui6ov7" [label=" cmx3mvieiui6ov7,\n D: Guatemala,E:max,\n T: 15, F: 25/02/2020,\n U: steven,\n A: Go green"] 
-"cmx3mvieiui6ov7" -> "cmx3mvieiui6ov7""cmx3mvieiui6ov7" -> "cmx3mvieiui6ov7"}
+ label="Reporte General"; 
+"evnzlmuat373ouu" [label=" evnzlmuat373ouu,\n D: Guatemala,E:max,\n T: 4, F: 12/05/2020,\n U: steven,\n A: chuco, : 0,\n A: evnzlmuat373ouu"] 
+"evnzlmuat373ouu" -> "zn6xv7lom2v7idi""evnzlmuat373ouu" -> "ycps0351yi6mjeq""zn6xv7lom2v7idi" [label=" zn6xv7lom2v7idi,\n D: Guatemala,E:max,\n T: 4, F: 05/20/20,\n U: jose,\n A: mac, : 0,\n A: zn6xv7lom2v7idi"] 
+"zn6xv7lom2v7idi" -> "cu8vzkg13qygf6u""zn6xv7lom2v7idi" -> "evnzlmuat373ouu""cu8vzkg13qygf6u" [label=" cu8vzkg13qygf6u,\n D: Xela,E:chiquita,\n T: 45, F: 04/05/2020,\n U: pepe,\n A: te frio, : 0,\n A: cu8vzkg13qygf6u"] 
+"cu8vzkg13qygf6u" -> "zzt9wftbxbe8x80""cu8vzkg13qygf6u" -> "zn6xv7lom2v7idi""zzt9wftbxbe8x80" [label=" zzt9wftbxbe8x80,\n D: Xela,E:chiquita,\n T: 5, F: 6,\n U: pepe,\n A: Go green, : 0,\n A: zzt9wftbxbe8x80"] 
+"zzt9wftbxbe8x80" -> "1m98wg78r2l1h4p""zzt9wftbxbe8x80" -> "cu8vzkg13qygf6u""1m98wg78r2l1h4p" [label=" 1m98wg78r2l1h4p,\n D: Guatemala,E:max,\n T: 12, F: 20/05/2020,\n U: steven,\n A: rojo, : 0,\n A: 1m98wg78r2l1h4p"] 
+"1m98wg78r2l1h4p" -> "ycps0351yi6mjeq""1m98wg78r2l1h4p" -> "zzt9wftbxbe8x80""ycps0351yi6mjeq" [label=" ycps0351yi6mjeq,\n D: Guatemala,E:max,\n T: 2, F: 2/05/2020,\n U: steven,\n A: naranja, : 0,\n A: ycps0351yi6mjeq"] 
+"ycps0351yi6mjeq" -> "evnzlmuat373ouu""ycps0351yi6mjeq" -> "1m98wg78r2l1h4p"}

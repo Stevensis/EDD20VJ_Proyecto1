@@ -216,7 +216,7 @@ void Matriz::insertarNodoMatriz(string name,string empresa,string departamento,s
     }
 
 }
-
+/**<  */
 NodoMatriz* Matriz::existe(string user,string departamento,string empresa)
 {
     NodoMatriz *userR=NULL;

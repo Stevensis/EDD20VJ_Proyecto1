@@ -2,9 +2,10 @@
 #include <iostream>
 #include <string>
 using namespace std;
-InterfaceAdmin::InterfaceAdmin(Matriz* ma)
+InterfaceAdmin::InterfaceAdmin(Matriz* ma,ListaDobleCircular* lstCircular)
 {
     this->m=ma;
+    this->lstDCircular=lstCircular;
     //ctor
 }
 
@@ -72,8 +73,10 @@ void InterfaceAdmin::menu2(){
                 this->acitivosXempresa();
                 break;
             case 5:
+                this->transaccionesR();
                 break;
             case 6:
+                this->activosxUsuario();
                 break;
             case 7:
                 break;
@@ -171,4 +174,28 @@ void InterfaceAdmin::graficar(string cuerpo,string nombre){
     system(creacion.c_str());
     string title = nombre  + ".jpg";
     ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
+}
+
+void InterfaceAdmin::activosxUsuario(){
+    cin.ignore();
+            cout << "----- Ingrese usuario --------!" << endl;
+        string user,password,departamento,empresa;
+        getline(cin,user);
+        cout << "----- Ingrese departamento --------!" << endl;
+        getline(cin,departamento);
+        cout << "----- Ingrese empresa --------!" << endl;
+        getline(cin,empresa);
+        NodoMatriz* userE=this->m->existe(user,departamento,empresa);
+        if(userE!=NULL){
+            string graficaxU="\n label=\" User: "+userE->name+"\"\n";
+            graficaxU+=userE->treeAvl->graficarArbol();
+            this->graficar(graficaxU,"ActivosDe_"+userE->nameuser);
+            cout<<"Se grafico el arbol de "<<userE->name<<endl;
+        }else{
+            cout << "----- Error con las credenciales --------!" << endl;
+        }
+}
+
+void InterfaceAdmin::transaccionesR(){
+    this->lstDCircular->grafoGeneral();
 }
