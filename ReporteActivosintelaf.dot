@@ -1,0 +1,18 @@
+digraph G { 
+
+ label="Empresa intelaf " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario pedro \n pedro " 
+node [height=0.5, width=1.2];
+"657zo0b7osseqf7" [label=" 657zo0b7osseqf7,\nlenovo",color=green] 
+"7yph6enjph1dm52" [label=" 7yph6enjph1dm52,\nazus",color=green] 
+"7yph6enjph1dm52" -> "oqg05bhae6kk8cl" 
+"7yph6enjph1dm52" -> "657zo0b7osseqf7" 
+"oqg05bhae6kk8cl" [label=" oqg05bhae6kk8cl,\nacer",color=green] 
+"ux69m9wndr9p51p" [label=" ux69m9wndr9p51p,\nhp",color=green] 
+"ux69m9wndr9p51p" -> "w8omotg3gyz9n97" 
+"ux69m9wndr9p51p" -> "7yph6enjph1dm52" 
+"w8omotg3gyz9n97" [label=" w8omotg3gyz9n97,\ndell",color=green] 
+}}

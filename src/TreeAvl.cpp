@@ -205,6 +205,28 @@ NodoActivo* TreeAvl::inorderE(NodoActivo* right){
     return right;
 }
 
+void TreeAvl::enorderCatalogo(NodoActivo *raiz){
+    if(raiz==NULL){return;}
+
+    enorderCatalogo(raiz->izquierda);
+    if(raiz->estado){
+        string imprimir="-*- Id: "+raiz->id+"; nombre: "+raiz->nombre+"; descripcion: "+ raiz->descripcion+"\n";
+        cout<< imprimir;
+    }
+    enorderCatalogo(raiz->derecha);
+}
+
+void TreeAvl::enorderMisAcR(NodoActivo *raiz){
+    if(raiz==NULL){return;}
+
+    enorderMisAcR(raiz->izquierda);
+    if(!raiz->estado){
+        string imprimir="-*- Id: "+raiz->id+"; nombre: "+raiz->nombre+"; descripcion: "+ raiz->descripcion+"\n";
+        cout<< imprimir;
+    }
+    enorderMisAcR(raiz->derecha);
+}
+
 TreeAvl::~TreeAvl()
 {
     //dtor

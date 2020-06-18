@@ -10,14 +10,47 @@ digraph Sparce_Matrix {
 1 -> 0
 0 -> 1
 e0[ shape = point, width = 0 ];{ rank = same; 1; e0 }
+ /* Empresas */ 
+4 [label = "intelaf"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
+{ rank = same; 4 ; 3 }
+4 -> 3
+3 -> 4
+e1[ shape = point, width = 0 ];{ rank = same; 4; e1 }
+ /* Empresas */ 
+7 [label = "chiquita"    pos = "5.3,3.5!" width = 1.5 style = filled, color = coral1, group = 1 ]; 
+{ rank = same; 7 ; 6 }
+7 -> 6
+6 -> 7
+e2[ shape = point, width = 0 ];{ rank = same; 7; e2 }
+   /* Enlacex entre empresas */ 
+1 -> 4
+4 -> 1
+
+   /* Enlacex entre empresas */ 
+4 -> 7
+7 -> 4
+
  /* Departamentos */ 
 2 [label = "Guatemala"   width = 1.5 style = filled, color = darkolivegreen2, group =2 ];
-0 [label = <<table border = "0"><tr><td>Steven sis</td></tr></table>>, width = 1.5, group = 2 ];
+0 [label = <<table border = "0"><tr><td>steven</td></tr><tr><td>jose</td></tr></table>>, width = 1.5, group = 2 ];
 2 -> 0
 0 -> 2
-2 -> e0 -> e1[ dir = none ];-1 -> 2
+
+ /* Departamentos */ 
+5 [label = "Xela"   width = 1.5 style = filled, color = darkolivegreen2, group =3 ];
+3 [label = <<table border = "0"><tr><td>pedro</td></tr></table>>, width = 1.5, group = 3 ];
+6 [label = <<table border = "0"><tr><td>juan</td></tr></table>>, width = 1.5, group = 3 ];
+5 -> 3
+3 -> 5
+3 -> 6
+6 -> 3
+
+   /* Enlaces entre departamentos */ 
+2 -> 5
+5 -> 2
+5 -> e0 -> e1[ dir = none ];-1 -> 2
 2 -> -1
 -1 -> 1
 1 -> -1
- { rank = same; -1; 2;  }
+ { rank = same; -1; 2; 5;  }
 }

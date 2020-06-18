@@ -1,9 +1,10 @@
 #include "InterfaceUser.h"
 
-InterfaceUser::InterfaceUser(Matriz* ma)
+InterfaceUser::InterfaceUser(Matriz* ma,ListaDobleCircular* tra)
 {
     this->m=ma;
     this->userE=NULL;
+    this->transacciones=tra;
     //ctor
 }
 
@@ -45,7 +46,7 @@ void InterfaceUser::menu(){
 void InterfaceUser::menu02(){
     bool option02=true;
     do{
-        cout << "... 1. Agregar activo  --------!" << endl;
+        cout << "\n... 1. Agregar activo  --------!" << endl;
         cout << "... 2. Eliminaractivo --------!" << endl;
         cout << "... 3. Modificar Activo --------!" << endl;
         cout << "... 4. Rentar Activo  --------!" << endl;
@@ -53,7 +54,8 @@ void InterfaceUser::menu02(){
         cout << "... 6. Mis Activos Rentados --------!" << endl;
         cout << "... 7. Cerrar Sesion --------!" << endl;
         int option12=0;
-        cin>>option12;
+        try { cin>>option12; } catch (...) { cout<<"no es una opcion\n"; }
+
         switch(option12){
         case 1:
             this->agregarActivo();
@@ -65,17 +67,44 @@ void InterfaceUser::menu02(){
             this->modificarActivo();
             break;
         case 4:
+            this->rentarActivo();
             break;
         case 5:
+            this->activosRentados();
             break;
         case 6:
+            this->misActivosRentados();
             break;
         case 7:
             option02=false;
             break;
         }
-        this->graficar(this->userE->treeAvl->graficarArbol());
+   //     this->graficar(this->userE->treeAvl->graficarArbol());
     }while(option02);
+}
+
+void InterfaceUser::rentarActivo(){
+    cin.ignore();
+    string id,dias,fecha;
+    cout<<"Catalogo de Activos \n";
+    this->m->catologo(this->userE);
+    cout<<"\n Ingrese Id de activo a rentar \n ...";
+    getline(cin,id);
+    NodoActivo* rentado= this->m->serachActivo(id);
+    if(rentado!=NULL){
+        cout<<"... Activo a rentar \n";
+        cout<<"-*- Id: "<<rentado->id<<"; nombre: "<<rentado->nombre<<"; descripcion: "<< rentado->descripcion <<endl;
+        cout<<"... Ingrese dias a rentar \n";
+        getline(cin,dias);
+        cout<<"... Ingrese fecha a rentar \n";
+        getline(cin,fecha);
+        rentado->estado=false;
+        this->transacciones->InsertarTransaccion(id,rentado,this->userE,fecha,dias,this->transacciones->primero,true);
+        this->transacciones->grafoGeneral();
+    }else{
+        cout<<"... No se encontro ID\n";
+    }
+
 }
 
 void InterfaceUser::agregarActivo(){
@@ -91,7 +120,7 @@ void InterfaceUser::agregarActivo(){
        verificar=this->m->serachActivo(id);
     }while(verificar!=NULL);
     this->userE->treeAvl->root=this->userE->treeAvl->insertar(this->userE->treeAvl->root,id,nombre,descripcion);
-    this->userE->treeAvl->preorder(this->userE->treeAvl->root);
+    //this->userE->treeAvl->preorder(this->userE->treeAvl->root);
 }
 
 void InterfaceUser::graficar(string cuerpo){
@@ -152,6 +181,50 @@ void InterfaceUser::modificarActivo(){
     }
 }
 
+void InterfaceUser::activosRentados(){
+    cout<<"\n-------- Activos rentados -----------\n";
+    this->activosRentados02();
+    string id;
+    int options;
+    do{
+        cout<<" \n-------- 1. Registrar Devolucion -----------\n";
+        cout<<" -------- 2. Registrar Volver al menu -----------\n";
+
+        cin>>options;
+        cin.ignore();
+        switch(options){
+        case 1:
+            cout<<" \n-------- Ingrese Id Del activo a devolver  -----------\n";
+            getline(cin,id);
+            NodoTransaccion* temp=this->transacciones->buscarTransicion(id);
+            if(temp!=NULL){
+                temp->activo->estado=true;
+                cout<<" \n-------- Activo Devuelto -----------\n";
+                cout<<".. Id: " <<temp->activo->id<<"; Nombre: "<<temp->activo->nombre<<"; Descripcion: "<<temp->activo->descripcion<<endl;
+            }else{
+                cout<<" \n-------- No se encontro activo con este id  -----------\n";
+            }
+            break;
+        }
+
+    }while(options==1);
+}
+
+void InterfaceUser::activosRentados02(){
+ NodoTransaccion* temp=this->transacciones->primero;
+    do{
+        if(temp->usuario==this->userE && !temp->activo->estado){
+            cout<<".. Id: " <<temp->activo->id<<"; Nombre: "<<temp->activo->nombre<<"; Descripcion: "<<temp->activo->descripcion<<endl;
+        }
+        temp=temp->siguiente;
+    }while(temp!=this->transacciones->primero);
+}
+
+void InterfaceUser::misActivosRentados(){
+    cout<<"\n-------- Mis Activos Rentados -----------\n";
+    this->userE->treeAvl->enorderMisAcR(this->userE->treeAvl->root);
+    cout<<"\n";
+}
 string InterfaceUser::idActivo(){
     int num, c;
     srand(time(NULL));

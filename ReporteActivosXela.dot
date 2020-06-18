@@ -1,0 +1,32 @@
+digraph G { 
+
+ label="Departamento: Xela " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario pedro \n pedro " 
+node [height=0.5, width=1.2];
+"71v5pdelzck1jf2" [label=" 71v5pdelzck1jf2,\nhp",color=green] 
+"71v5pdelzck1jf2" -> "ggp3g8ompqwzydh" 
+"ggp3g8ompqwzydh" [label=" ggp3g8ompqwzydh,\nazus",color=green] 
+"qyzczimtzj9ztvu" [label=" qyzczimtzj9ztvu,\nacer",color=green] 
+"qyzczimtzj9ztvu" -> "riy7ss376pde1mh" 
+"qyzczimtzj9ztvu" -> "71v5pdelzck1jf2" 
+"riy7ss376pde1mh" [label=" riy7ss376pde1mh,\ndell",color=green] 
+"riy7ss376pde1mh" -> "v10csee19w9ctfr" 
+"v10csee19w9ctfr" [label=" v10csee19w9ctfr,\nlenovo",color=green] 
+}
+ subgraph cluster_1 { 
+
+ label="Usuario juan \n juan " 
+node [height=0.5, width=1.2];
+"9tkim7o3oajr5y9" [label=" 9tkim7o3oajr5y9,\nchuco",color=green] 
+"9uu1k9cwlqwohos" [label=" 9uu1k9cwlqwohos,\npanda",color=green] 
+"9uu1k9cwlqwohos" -> "9tkim7o3oajr5y9" 
+"cmx3mvieiui6ov7" [label=" cmx3mvieiui6ov7,\nGo green",color=red] 
+"cmx3mvieiui6ov7" -> "xxtyylapf0dab3y" 
+"cmx3mvieiui6ov7" -> "9uu1k9cwlqwohos" 
+"strmgtoh7ovq83t" [label=" strmgtoh7ovq83t,\ntaco",color=green] 
+"xxtyylapf0dab3y" [label=" xxtyylapf0dab3y,\nmac",color=green] 
+"xxtyylapf0dab3y" -> "strmgtoh7ovq83t" 
+}}

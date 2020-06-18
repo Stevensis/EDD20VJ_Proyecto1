@@ -1,0 +1,30 @@
+digraph G { 
+
+ label="Departamento: Guatemala " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario steven \n steven " 
+node [height=0.5, width=1.2];
+"5fa0e391htfzynn" [label=" 5fa0e391htfzynn,\nte frio",color=green] 
+"ia4b0215vyjsu49" [label=" ia4b0215vyjsu49,\nChai",color=green] 
+"ia4b0215vyjsu49" -> "5fa0e391htfzynn" 
+"l5jiwdjxwvlnpo9" [label=" l5jiwdjxwvlnpo9,\ncafe",color=green] 
+"l5jiwdjxwvlnpo9" -> "onu9w65kyk39kdk" 
+"l5jiwdjxwvlnpo9" -> "ia4b0215vyjsu49" 
+"onu9w65kyk39kdk" [label=" onu9w65kyk39kdk,\nte",color=green] 
+}
+ subgraph cluster_1 { 
+
+ label="Usuario jose \n jose " 
+node [height=0.5, width=1.2];
+"07fsjhhu6ma6x8o" [label=" 07fsjhhu6ma6x8o,\nnaranja",color=green] 
+"5g2owzhqacflx2o" [label=" 5g2owzhqacflx2o,\nAzul",color=green] 
+"5g2owzhqacflx2o" -> "mrm90vsvzneccr4" 
+"5g2owzhqacflx2o" -> "07fsjhhu6ma6x8o" 
+"iln9i4epesow26h" [label=" iln9i4epesow26h,\ncafe",color=green] 
+"mrm90vsvzneccr4" [label=" mrm90vsvzneccr4,\nnegra",color=green] 
+"mrm90vsvzneccr4" -> "xkwhuaamwf0ehf7" 
+"mrm90vsvzneccr4" -> "iln9i4epesow26h" 
+"xkwhuaamwf0ehf7" [label=" xkwhuaamwf0ehf7,\nrojo",color=green] 
+}}

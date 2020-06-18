@@ -66,8 +66,10 @@ void InterfaceAdmin::menu2(){
                 this->m->graficarMatriz("Prueba");
                 break;
             case 3:
+                this->activosxdepartemento();
                 break;
             case 4:
+                this->acitivosXempresa();
                 break;
             case 5:
                 break;
@@ -101,4 +103,72 @@ void InterfaceAdmin::adduser(){
     cout<<"... Ingresar Empresa ..."<<endl;
     getline(cin,empresa);
     this->m->insertarNodoMatriz(name,empresa,departamento,user,password,this->m->contadorN++);
+}
+
+void InterfaceAdmin::acitivosXempresa(){
+    cout<<"---Ingrese empresa a ver activos--"<<endl;
+    string empresaS,graficaxE;
+    int contador=0;
+    cin.ignore();
+    getline(cin,empresaS);
+    NodoMatriz* tempE= this->m->searchEmpresa(empresaS);
+    if(tempE!=NULL){
+        graficaxE="\n label=\"Empresa "+tempE->name+" \" \n";
+        NodoMatriz* tempU=tempE->adelante;
+        while(tempU!=NULL){
+            NodoMatriz* tempU2=tempU;
+            while(tempU2!=NULL){
+                graficaxE+="\n subgraph cluster_"+ to_string(contador) +" { \n";
+                graficaxE+="\n label=\"Usuario "+tempU2->name+" \\n "+ tempU2->nameuser +" \" \n";
+                graficaxE+=tempU2->treeAvl->graficarArbol();
+                graficaxE+="}";
+                tempU2=tempU2->padentro;
+                contador++;
+            }
+            tempU=tempU->adelante;
+        }
+        this->graficar(graficaxE,"ReporteActivos"+tempE->name);
+    }
+}
+
+void InterfaceAdmin::activosxdepartemento(){
+    cout<<"---Ingrese departamento a ver activos--"<<endl;
+    string empresaS,graficaxE;
+    int contador=0;
+    cin.ignore();
+    getline(cin,empresaS);
+    NodoMatriz* tempE= this->m->searchDepartamento(empresaS);
+    if(tempE!=NULL){
+        graficaxE="\n label=\"Departamento: "+tempE->name+" \" \n";
+        NodoMatriz* tempU=tempE->abajo;
+        while(tempU!=NULL){
+            NodoMatriz* tempU2=tempU;
+            while(tempU2!=NULL){
+                graficaxE+="\n subgraph cluster_"+to_string(contador)+" { \n";
+                graficaxE+="\n label=\"Usuario "+tempU2->name+" \\n "+ tempU2->nameuser +" \" \n";
+                graficaxE+=tempU2->treeAvl->graficarArbol();
+                graficaxE+="}";
+                tempU2=tempU2->padentro;
+                contador++;
+            }
+            tempU=tempU->abajo;
+        }
+        this->graficar(graficaxE,"ReporteActivos"+tempE->name);
+    }
+}
+
+void InterfaceAdmin::graficar(string cuerpo,string nombre){
+    string nameA=nombre+".dot";
+    ofstream grafica;
+    grafica.open(nameA, ios::out);
+    grafica << "digraph G { \n";
+    grafica << cuerpo;
+    grafica << "}";
+
+    grafica.close();
+
+    string creacion = "dot -Tjpg " + nombre + ".dot -o " + nombre + ".jpg";
+    system(creacion.c_str());
+    string title = nombre  + ".jpg";
+    ShellExecute(NULL, "open", title.c_str(), NULL, NULL, SW_SHOWNORMAL);
 }

@@ -392,6 +392,29 @@ NodoActivo* Matriz::serachActivo(string id){
     return NULL;
 }
 
+//Imprimimos el catalogo de activos
+
+void Matriz::catologo(NodoMatriz* user){
+        NodoMatriz* tempNM= this->root->adelante;
+    //recoremos los departamentos, para esto nos vamos de la raiz por todos adelabte
+    while(tempNM!=NULL){
+        //recorremos los nodos usuarios
+        NodoMatriz* tempU= tempNM->abajo;
+        while(tempU!=NULL){
+                //recorremos el mismo nodo pero para adentro con los demas usuarios, si es que tiene
+                NodoMatriz* tempU2=tempU;
+                while(tempU2!=NULL){
+                    if(tempU2!=user){
+                        tempU2->treeAvl->enorderCatalogo(tempU2->treeAvl->root);
+                    }
+                    tempU2=tempU2->padentro;
+                }
+            tempU=tempU->abajo;
+        }
+        tempNM=tempNM->adelante;
+    }
+}
+
 Matriz::~Matriz()
 {
     //dtor

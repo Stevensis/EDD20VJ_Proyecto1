@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/AletorioP.h" />
 		<Unit filename="include/InterfaceAdmin.h" />
 		<Unit filename="include/InterfaceUser.h" />
 		<Unit filename="include/ListaDobleCircular.h" />
@@ -43,6 +44,7 @@
 		<Unit filename="include/NodoTransaccion.h" />
 		<Unit filename="include/TreeAvl.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/AletorioP.cpp" />
 		<Unit filename="src/InterfaceAdmin.cpp" />
 		<Unit filename="src/InterfaceUser.cpp" />
 		<Unit filename="src/ListaDobleCircular.cpp" />

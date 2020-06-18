@@ -1,0 +1,32 @@
+digraph G { 
+
+ label="Empresa max " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario steven \n steven " 
+node [height=0.5, width=1.2];
+"f8vt9nh5rr3kxij" [label=" f8vt9nh5rr3kxij,\nte frio",color=green] 
+"h7d3s94f7hkc6a4" [label=" h7d3s94f7hkc6a4,\nleche",color=green] 
+"h7d3s94f7hkc6a4" -> "f8vt9nh5rr3kxij" 
+"ibukoh85aba9zew" [label=" ibukoh85aba9zew,\nte",color=green] 
+"ibukoh85aba9zew" -> "y1watnycgcf4iq3" 
+"ibukoh85aba9zew" -> "h7d3s94f7hkc6a4" 
+"mv2s089gy1fjtbu" [label=" mv2s089gy1fjtbu,\nChai",color=green] 
+"y1watnycgcf4iq3" [label=" y1watnycgcf4iq3,\ncafe",color=green] 
+"y1watnycgcf4iq3" -> "mv2s089gy1fjtbu" 
+}
+ subgraph cluster_1 { 
+
+ label="Usuario jose \n jose " 
+node [height=0.5, width=1.2];
+"51pb0ypocpo1b8c" [label=" 51pb0ypocpo1b8c,\nAzul",color=green] 
+"51pb0ypocpo1b8c" -> "77c2gsfke95q0as" 
+"77c2gsfke95q0as" [label=" 77c2gsfke95q0as,\ncafe",color=green] 
+"desw3t234iq2rcw" [label=" desw3t234iq2rcw,\nnaranja",color=green] 
+"desw3t234iq2rcw" -> "lmwmzlqu99ycdz9" 
+"desw3t234iq2rcw" -> "51pb0ypocpo1b8c" 
+"g0gvvynxcogtlfy" [label=" g0gvvynxcogtlfy,\nnegra",color=green] 
+"lmwmzlqu99ycdz9" [label=" lmwmzlqu99ycdz9,\nrojo",color=green] 
+"lmwmzlqu99ycdz9" -> "g0gvvynxcogtlfy" 
+}}

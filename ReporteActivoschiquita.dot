@@ -1,0 +1,18 @@
+digraph G { 
+
+ label="Empresa chiquita " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario juan \n juan " 
+node [height=0.5, width=1.2];
+"0wzuw0kpzsbbavd" [label=" 0wzuw0kpzsbbavd,\ntaco",color=green] 
+"3p23dfmgnqbet3z" [label=" 3p23dfmgnqbet3z,\nchuco",color=green] 
+"3p23dfmgnqbet3z" -> "79vyo3xafuvv4wd" 
+"3p23dfmgnqbet3z" -> "0wzuw0kpzsbbavd" 
+"79vyo3xafuvv4wd" [label=" 79vyo3xafuvv4wd,\nGo green",color=green] 
+"to6w3doxjn07kus" [label=" to6w3doxjn07kus,\nmac",color=green] 
+"to6w3doxjn07kus" -> "ud9z52e4ielbn0p" 
+"to6w3doxjn07kus" -> "3p23dfmgnqbet3z" 
+"ud9z52e4ielbn0p" [label=" ud9z52e4ielbn0p,\npanda",color=green] 
+}}

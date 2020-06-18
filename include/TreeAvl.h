@@ -26,7 +26,8 @@ class TreeAvl
         int AlturaAux2(NodoActivo* raiz);
         NodoActivo* eliminar(NodoActivo* raiz, string dato);
         NodoActivo* inorderE(NodoActivo* right);
-
+        void enorderCatalogo(NodoActivo *raiz);
+        void enorderMisAcR(NodoActivo *raiz);
         virtual ~TreeAvl();
 
     protected:

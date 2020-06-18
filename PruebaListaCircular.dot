@@ -1,0 +1,6 @@
+digraph  { 
+ nodesep=.05; 
+ rankdir=LR; 
+ node [shape=record,width=.5,height=2.5]; 
+"cmx3mvieiui6ov7" [label=" cmx3mvieiui6ov7,\n D: Guatemala,E:max,\n T: 15, F: 25/02/2020,\n U: steven,\n A: Go green"] 
+"cmx3mvieiui6ov7" -> "cmx3mvieiui6ov7""cmx3mvieiui6ov7" -> "cmx3mvieiui6ov7"}
