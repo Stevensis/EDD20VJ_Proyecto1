@@ -235,10 +235,10 @@ NodoMatriz* Matriz::existe(string user,string departamento,string empresa)
             }
             if(tempD->name==departamento){
                 NodoMatriz *tempU=tempE;
-                if(tempU->nameuser==user){cout<<"usuario ya existenete\n"; return tempU;}
+                if(tempU->nameuser==user){ return tempU;}
                 while(tempU->padentro!=NULL){
                     tempU=tempU->padentro;
-                    if(tempU->nameuser==user){cout<<"usuario ya existenete\n"; return tempU;}
+                    if(tempU->nameuser==user){ return tempU;}
                 }
             }
             tempE=tempE->adelante;

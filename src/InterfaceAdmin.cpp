@@ -224,8 +224,11 @@ void InterfaceAdmin::ordenar(){
     switch(opcion){
     case 1:
         this->lstDCircular->ordenaInsercion();
+        cout << "----- Regrese al menu y vuelva a imprimir la lista  --------!" << endl;
         break;
     case 2:
+        this->lstDCircular->ordenBurbujaDesc();
+        cout << "----- Regrese al menu y vuelva a imprimir la lista  --------!" << endl;
         break;
     }
 

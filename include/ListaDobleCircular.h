@@ -12,6 +12,7 @@ class ListaDobleCircular
         void InsertarTransaccion(string i, NodoActivo* ac, NodoMatriz* ma, string fe,string di,NodoTransaccion* n, bool v,NodoMatriz* de,NodoMatriz* emp);
         void grafoGeneral();
         void ordenaInsercion();
+        void ordenBurbujaDesc();
         void grafoporUsuario(NodoMatriz* user);
         NodoTransaccion* buscarTransicion(string id);
         NodoTransaccion* buscarTransicion02(string id);

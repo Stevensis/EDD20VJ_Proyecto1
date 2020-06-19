@@ -4,8 +4,14 @@ digraph  {
  node [shape=record,width=.5,height=2.5]; 
  label="Reporte General"; 
 label=" Rentados de : jose"
-"0" [label=" wke6fq7muhh9bso,\n D: Guatemala,E:max,\n T: 09, F: 01/01/2020,\n U: jose,\n A: panda, : 0,\n A: 5xyxippwclgi8ux"] 
-"1" [label=" j6s9tts3ki4w096,\n D: Guatemala,E:max,\n T: 08, F: 09/03/2020,\n U: jose,\n A: mac, : 0,\n A: ol895v9e5rkt35b"] 
+"0" [label=" sy5si9mdlnfzp8c,\n D: Guatemala,E:max,\n T: 12312, F: 12312213,\n U: jose,\n A: dell, : 0,\n A: 0di1i43qlr371io"] 
+"1" [label=" ovealsk001y4tiu,\n D: Guatemala,E:max,\n T: ads123, F: 12312,\n U: jose,\n A: hp, : 0,\n A: vja7km4w39c3xso"] 
+"2" [label=" i2u3zn23ynkr4am,\n D: Guatemala,E:max,\n T: 1234, F: 12312,\n U: jose,\n A: azus, : 0,\n A: 5d3eccengetxvzz"] 
+"3" [label=" fzwrjmdm3fuia58,\n D: Guatemala,E:max,\n T: 12, F: 20/20/20,\n U: jose,\n A: cafe, : 0,\n A: 73iyi8epw0pi0fn"] 
 
 "0" -> "1" 
+
+"1" -> "2" 
+
+"2" -> "3" 
 }

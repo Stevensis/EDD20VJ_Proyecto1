@@ -145,6 +145,47 @@ void ListaDobleCircular::ordenaInsercion(){
 
 }
 
+void ListaDobleCircular::ordenBurbujaDesc(){
+    NodoTransaccion* aux;
+    NodoTransaccion* i;
+    NodoTransaccion* j;
+
+    if(this->primero!=NULL && this->primero->siguiente!=this->primero){
+        i=this->primero;
+        do{
+            j=i->siguiente;
+            do{
+            if(i->id<j->id){
+                aux=i;
+                NodoMatriz* empre=i->empresa;
+                NodoMatriz* dep=i->departamento;
+                NodoMatriz* use=i->usuario;
+                NodoActivo* ac=i->activo;
+                string di = i->dias;
+                string fe = i->fecha;
+                string iid = i->id;
+                i->activo=j->activo;
+                i->departamento=j->departamento;
+                i->dias=j->dias;
+                i->empresa=j->empresa;
+                i->fecha=j->fecha;
+                i->id=j->id;
+                j->activo= ac;
+                j->departamento=dep;
+                j->dias=di;
+                j->empresa=empre;
+                j->fecha=fe;
+                j->id=iid;
+                j->usuario=use;
+            }
+            j=j->siguiente;
+            }while(j!=this->primero);
+            i=i->siguiente;
+        }while(i!=this->primero->anterior);
+
+    }
+}
+
 ListaDobleCircular::~ListaDobleCircular()
 {
     //dtor

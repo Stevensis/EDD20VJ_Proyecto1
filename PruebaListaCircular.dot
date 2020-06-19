@@ -3,9 +3,9 @@ digraph  {
  rankdir=LR; 
  node [shape=record,width=.5,height=2.5]; 
  label="Reporte General"; 
-"1ihqov0c9k4u0bk" [label=" 1ihqov0c9k4u0bk,\n D: Guatemala,E:max,\n T: 123, F: 1234,\n U: steven,\n A: Azul, : 0,\n A: b0w2l0dq67l7sty"] 
-"1ihqov0c9k4u0bk" -> "1ybuo97kepbd5te""1ihqov0c9k4u0bk" -> "bifv7hyaxud4e9r""1ybuo97kepbd5te" [label=" 1ybuo97kepbd5te,\n D: Guatemala,E:max,\n T: 1231, F: 123432,\n U: steven,\n A: hp, : 1,\n A: oewrl7tsfiwatcz"] 
-"1ybuo97kepbd5te" -> "5fvuzc9ssntivf6""1ybuo97kepbd5te" -> "1ihqov0c9k4u0bk""5fvuzc9ssntivf6" [label=" 5fvuzc9ssntivf6,\n D: Guatemala,E:max,\n T: 12312, F: 43131,\n U: steven,\n A: taco, : 0,\n A: szmsipu9hen9ki8"] 
-"5fvuzc9ssntivf6" -> "5yd56qugy2e5sqg""5fvuzc9ssntivf6" -> "1ybuo97kepbd5te""5yd56qugy2e5sqg" [label=" 5yd56qugy2e5sqg,\n D: Guatemala,E:max,\n T: 123, F: 12331,\n U: steven,\n A: chuco, : 0,\n A: 4lvhdvstdyjbpka"] 
-"5yd56qugy2e5sqg" -> "bifv7hyaxud4e9r""5yd56qugy2e5sqg" -> "5fvuzc9ssntivf6""bifv7hyaxud4e9r" [label=" bifv7hyaxud4e9r,\n D: Guatemala,E:max,\n T: 23, F: 12313,\n U: steven,\n A: negra, : 0,\n A: yp8ay16awd2blvk"] 
-"bifv7hyaxud4e9r" -> "1ihqov0c9k4u0bk""bifv7hyaxud4e9r" -> "5yd56qugy2e5sqg"}
+"sy5si9mdlnfzp8c" [label=" sy5si9mdlnfzp8c,\n D: Guatemala,E:max,\n T: 12312, F: 12312213,\n U: jose,\n A: dell, : 0,\n A: 0di1i43qlr371io"] 
+"sy5si9mdlnfzp8c" -> "ovealsk001y4tiu""sy5si9mdlnfzp8c" -> "8xs5o0hsauojrd3""ovealsk001y4tiu" [label=" ovealsk001y4tiu,\n D: Guatemala,E:max,\n T: ads123, F: 12312,\n U: jose,\n A: hp, : 0,\n A: vja7km4w39c3xso"] 
+"ovealsk001y4tiu" -> "i2u3zn23ynkr4am""ovealsk001y4tiu" -> "sy5si9mdlnfzp8c""i2u3zn23ynkr4am" [label=" i2u3zn23ynkr4am,\n D: Guatemala,E:max,\n T: 1234, F: 12312,\n U: jose,\n A: azus, : 0,\n A: 5d3eccengetxvzz"] 
+"i2u3zn23ynkr4am" -> "fzwrjmdm3fuia58""i2u3zn23ynkr4am" -> "ovealsk001y4tiu""fzwrjmdm3fuia58" [label=" fzwrjmdm3fuia58,\n D: Guatemala,E:max,\n T: 12, F: 20/20/20,\n U: jose,\n A: cafe, : 0,\n A: 73iyi8epw0pi0fn"] 
+"fzwrjmdm3fuia58" -> "8xs5o0hsauojrd3""fzwrjmdm3fuia58" -> "i2u3zn23ynkr4am""8xs5o0hsauojrd3" [label=" 8xs5o0hsauojrd3,\n D: Guatemala,E:max,\n T: 21312, F: 23adas,\n U: steven,\n A: acer, : 0,\n A: e71f7070ggmvuff"] 
+"8xs5o0hsauojrd3" -> "sy5si9mdlnfzp8c""8xs5o0hsauojrd3" -> "fzwrjmdm3fuia58"}

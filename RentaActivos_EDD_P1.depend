@@ -38,7 +38,7 @@
 	<bits/stdc++.h>
 	<windows.h>
 
-1592525235 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\listadoblecircular.h
+1592534386 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\listadoblecircular.h
 	"NodoTransaccion.h"
 	<bits/stdc++.h>
 	<windows.h>
@@ -93,6 +93,6 @@
 1592451387 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\treeavl.cpp
 	"TreeAvl.h"
 
-1592533294 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\listadoblecircular.cpp
+1592534523 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\listadoblecircular.cpp
 	"ListaDobleCircular.h"
 
