@@ -79,8 +79,10 @@ void InterfaceAdmin::menu2(){
                 this->activosxUsuario();
                 break;
             case 7:
+                this->rentadosxUsuario();
                 break;
             case 8:
+                this->ordenar();
                 break;
             case 9:
                 menu02=false;
@@ -196,6 +198,40 @@ void InterfaceAdmin::activosxUsuario(){
         }
 }
 
+void InterfaceAdmin::rentadosxUsuario(){
+        cin.ignore();
+        cout << "----- Ingrese usuario --------!" << endl;
+        string user,password,departamento,empresa;
+        getline(cin,user);
+        cout << "----- Ingrese departamento --------!" << endl;
+        getline(cin,departamento);
+        cout << "----- Ingrese empresa --------!" << endl;
+        getline(cin,empresa);
+        NodoMatriz* userE=this->m->existe(user,departamento,empresa);
+        if(userE!=NULL){
+            this->lstDCircular->grafoporUsuario(userE);
+            cout<<"Se grafico los activos rentados de "<<userE->name<<endl;
+        }else{
+            cout << "----- Error con las credenciales --------!" << endl;
+        }
+}
+
+void InterfaceAdmin::ordenar(){
+    cout << "----- 1. Ordenar Acendentemente --------!" << endl;
+    cout << "----- 2. Ordenar Descendentemente --------!" << endl;
+    int opcion;
+    cin>>opcion;
+    switch(opcion){
+    case 1:
+        this->lstDCircular->ordenaInsercion();
+        break;
+    case 2:
+        break;
+    }
+
+}
 void InterfaceAdmin::transaccionesR(){
     this->lstDCircular->grafoGeneral();
 }
+
+

@@ -6,27 +6,32 @@ digraph G {
 
  label="Usuario pedro \n pedro " 
 node [height=0.5, width=1.2];
-"71v5pdelzck1jf2" [label=" 71v5pdelzck1jf2,\nhp",color=green] 
-"71v5pdelzck1jf2" -> "ggp3g8ompqwzydh" 
-"ggp3g8ompqwzydh" [label=" ggp3g8ompqwzydh,\nazus",color=green] 
-"qyzczimtzj9ztvu" [label=" qyzczimtzj9ztvu,\nacer",color=green] 
-"qyzczimtzj9ztvu" -> "riy7ss376pde1mh" 
-"qyzczimtzj9ztvu" -> "71v5pdelzck1jf2" 
-"riy7ss376pde1mh" [label=" riy7ss376pde1mh,\ndell",color=green] 
-"riy7ss376pde1mh" -> "v10csee19w9ctfr" 
-"v10csee19w9ctfr" [label=" v10csee19w9ctfr,\nlenovo",color=green] 
+"1pmnm3lvvz2fj5j" [label=" 1pmnm3lvvz2fj5j,\nlenovo",color=green] 
+"ikmi9mkibzrnnid" [label=" ikmi9mkibzrnnid,\ndell",color=red] 
+"ikmi9mkibzrnnid" -> "1pmnm3lvvz2fj5j" 
+"kwz7n6gqjqzgb04" [label=" kwz7n6gqjqzgb04,\nhp",color=green] 
+"kwz7n6gqjqzgb04" -> "pvle9ycrhe0ieaz" 
+"kwz7n6gqjqzgb04" -> "ikmi9mkibzrnnid" 
+"pvle9ycrhe0ieaz" [label=" pvle9ycrhe0ieaz,\nacer",color=green] 
+"pvle9ycrhe0ieaz" -> "zlch1vvk5ky9ii6" 
+"zlch1vvk5ky9ii6" [label=" zlch1vvk5ky9ii6,\nazus",color=green] 
 }
  subgraph cluster_1 { 
 
  label="Usuario juan \n juan " 
 node [height=0.5, width=1.2];
-"9tkim7o3oajr5y9" [label=" 9tkim7o3oajr5y9,\nchuco",color=green] 
-"9uu1k9cwlqwohos" [label=" 9uu1k9cwlqwohos,\npanda",color=green] 
-"9uu1k9cwlqwohos" -> "9tkim7o3oajr5y9" 
-"cmx3mvieiui6ov7" [label=" cmx3mvieiui6ov7,\nGo green",color=red] 
-"cmx3mvieiui6ov7" -> "xxtyylapf0dab3y" 
-"cmx3mvieiui6ov7" -> "9uu1k9cwlqwohos" 
-"strmgtoh7ovq83t" [label=" strmgtoh7ovq83t,\ntaco",color=green] 
-"xxtyylapf0dab3y" [label=" xxtyylapf0dab3y,\nmac",color=green] 
-"xxtyylapf0dab3y" -> "strmgtoh7ovq83t" 
+"5xyxippwclgi8ux" [label=" 5xyxippwclgi8ux,\npanda",color=red] 
+"c8wltunop40zlua" [label=" c8wltunop40zlua,\nGo green",color=green] 
+"c8wltunop40zlua" -> "ol895v9e5rkt35b" 
+"c8wltunop40zlua" -> "5xyxippwclgi8ux" 
+"n2grncy4r6yoli5" [label=" n2grncy4r6yoli5,\ntaco",color=green] 
+"ol895v9e5rkt35b" [label=" ol895v9e5rkt35b,\nmac",color=red] 
+"ol895v9e5rkt35b" -> "rk60m0lg5uek54n" 
+"ol895v9e5rkt35b" -> "n2grncy4r6yoli5" 
+"rk60m0lg5uek54n" [label=" rk60m0lg5uek54n,\nchuco",color=green] 
+}
+ subgraph cluster_2 { 
+
+ label="Usuario pepe \n pepe " 
+node [height=0.5, width=1.2];
 }}

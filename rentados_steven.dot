@@ -1,0 +1,20 @@
+digraph  { 
+ nodesep=.05; 
+ rankdir=LR; 
+ node [shape=record,width=.5,height=2.5]; 
+ label="Reporte General"; 
+label=" Rentados de : steven"
+"0" [label=" 226qzfqb40z49kh,\n D: Guatemala,E:max,\n T: 4, F: 32323,\n U: steven,\n A: azus, : 0,\n A: h3g83cc10swttkl"] 
+"1" [label=" 5a89qve8od2v4hj,\n D: Guatemala,E:max,\n T: 3, F: 4234,\n U: steven,\n A: panda, : 0,\n A: nzvprkig70v5fss"] 
+"2" [label=" ztuqwco3q2hzjrp,\n D: Guatemala,E:max,\n T: 3, F: 12312,\n U: steven,\n A: Go green, : 0,\n A: ovnqbzostk7guav"] 
+"3" [label=" 2to1esbzaekqeor,\n D: Guatemala,E:max,\n T: 3, F: 4232,\n U: steven,\n A: naranja, : 0,\n A: sqign3v7yzsy4oc"] 
+"4" [label=" fazd8hcydnb6i7i,\n D: Guatemala,E:max,\n T: 1, F: 232,\n U: steven,\n A: lenovo, : 0,\n A: ff0mtguwn3l4k5q"] 
+
+"0" -> "1" 
+
+"1" -> "2" 
+
+"2" -> "3" 
+
+"3" -> "4" 
+}

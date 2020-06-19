@@ -3,10 +3,9 @@ digraph  {
  rankdir=LR; 
  node [shape=record,width=.5,height=2.5]; 
  label="Reporte General"; 
-"evnzlmuat373ouu" [label=" evnzlmuat373ouu,\n D: Guatemala,E:max,\n T: 4, F: 12/05/2020,\n U: steven,\n A: chuco, : 0,\n A: evnzlmuat373ouu"] 
-"evnzlmuat373ouu" -> "zn6xv7lom2v7idi""evnzlmuat373ouu" -> "ycps0351yi6mjeq""zn6xv7lom2v7idi" [label=" zn6xv7lom2v7idi,\n D: Guatemala,E:max,\n T: 4, F: 05/20/20,\n U: jose,\n A: mac, : 0,\n A: zn6xv7lom2v7idi"] 
-"zn6xv7lom2v7idi" -> "cu8vzkg13qygf6u""zn6xv7lom2v7idi" -> "evnzlmuat373ouu""cu8vzkg13qygf6u" [label=" cu8vzkg13qygf6u,\n D: Xela,E:chiquita,\n T: 45, F: 04/05/2020,\n U: pepe,\n A: te frio, : 0,\n A: cu8vzkg13qygf6u"] 
-"cu8vzkg13qygf6u" -> "zzt9wftbxbe8x80""cu8vzkg13qygf6u" -> "zn6xv7lom2v7idi""zzt9wftbxbe8x80" [label=" zzt9wftbxbe8x80,\n D: Xela,E:chiquita,\n T: 5, F: 6,\n U: pepe,\n A: Go green, : 0,\n A: zzt9wftbxbe8x80"] 
-"zzt9wftbxbe8x80" -> "1m98wg78r2l1h4p""zzt9wftbxbe8x80" -> "cu8vzkg13qygf6u""1m98wg78r2l1h4p" [label=" 1m98wg78r2l1h4p,\n D: Guatemala,E:max,\n T: 12, F: 20/05/2020,\n U: steven,\n A: rojo, : 0,\n A: 1m98wg78r2l1h4p"] 
-"1m98wg78r2l1h4p" -> "ycps0351yi6mjeq""1m98wg78r2l1h4p" -> "zzt9wftbxbe8x80""ycps0351yi6mjeq" [label=" ycps0351yi6mjeq,\n D: Guatemala,E:max,\n T: 2, F: 2/05/2020,\n U: steven,\n A: naranja, : 0,\n A: ycps0351yi6mjeq"] 
-"ycps0351yi6mjeq" -> "evnzlmuat373ouu""ycps0351yi6mjeq" -> "1m98wg78r2l1h4p"}
+"1ihqov0c9k4u0bk" [label=" 1ihqov0c9k4u0bk,\n D: Guatemala,E:max,\n T: 123, F: 1234,\n U: steven,\n A: Azul, : 0,\n A: b0w2l0dq67l7sty"] 
+"1ihqov0c9k4u0bk" -> "1ybuo97kepbd5te""1ihqov0c9k4u0bk" -> "bifv7hyaxud4e9r""1ybuo97kepbd5te" [label=" 1ybuo97kepbd5te,\n D: Guatemala,E:max,\n T: 1231, F: 123432,\n U: steven,\n A: hp, : 1,\n A: oewrl7tsfiwatcz"] 
+"1ybuo97kepbd5te" -> "5fvuzc9ssntivf6""1ybuo97kepbd5te" -> "1ihqov0c9k4u0bk""5fvuzc9ssntivf6" [label=" 5fvuzc9ssntivf6,\n D: Guatemala,E:max,\n T: 12312, F: 43131,\n U: steven,\n A: taco, : 0,\n A: szmsipu9hen9ki8"] 
+"5fvuzc9ssntivf6" -> "5yd56qugy2e5sqg""5fvuzc9ssntivf6" -> "1ybuo97kepbd5te""5yd56qugy2e5sqg" [label=" 5yd56qugy2e5sqg,\n D: Guatemala,E:max,\n T: 123, F: 12331,\n U: steven,\n A: chuco, : 0,\n A: 4lvhdvstdyjbpka"] 
+"5yd56qugy2e5sqg" -> "bifv7hyaxud4e9r""5yd56qugy2e5sqg" -> "5fvuzc9ssntivf6""bifv7hyaxud4e9r" [label=" bifv7hyaxud4e9r,\n D: Guatemala,E:max,\n T: 23, F: 12313,\n U: steven,\n A: negra, : 0,\n A: yp8ay16awd2blvk"] 
+"bifv7hyaxud4e9r" -> "1ihqov0c9k4u0bk""bifv7hyaxud4e9r" -> "5yd56qugy2e5sqg"}

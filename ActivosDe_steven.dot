@@ -2,11 +2,13 @@ digraph G {
 
  label=" User: steven"
 node [height=0.5, width=1.2];
-"0hvtj9ccyitqxlp" [label=" 0hvtj9ccyitqxlp,\nChai",color=green] 
-"b8klc1zao2izwqf" [label=" b8klc1zao2izwqf,\nte",color=green] 
-"b8klc1zao2izwqf" -> "0hvtj9ccyitqxlp" 
-"hukbagyt4uzkwhg" [label=" hukbagyt4uzkwhg,\nte frio",color=green] 
-"hukbagyt4uzkwhg" -> "qk6la4mtph58wck" 
-"hukbagyt4uzkwhg" -> "b8klc1zao2izwqf" 
-"qk6la4mtph58wck" [label=" qk6la4mtph58wck,\nleche",color=red] 
+"8k4m8tuxpj990ff" [label=" 8k4m8tuxpj990ff,\nleche",color=green] 
+"o7y3bjsf0ckbz6l" [label=" o7y3bjsf0ckbz6l,\nte frio",color=green] 
+"o7y3bjsf0ckbz6l" -> "tj9n2bisk6xve1i" 
+"o7y3bjsf0ckbz6l" -> "8k4m8tuxpj990ff" 
+"tj9n2bisk6xve1i" [label=" tj9n2bisk6xve1i,\nChai",color=green] 
+"tnvjw88gq34fnmf" [label=" tnvjw88gq34fnmf,\ncafe",color=green] 
+"tnvjw88gq34fnmf" -> "zxr1fcx2emewrxw" 
+"tnvjw88gq34fnmf" -> "o7y3bjsf0ckbz6l" 
+"zxr1fcx2emewrxw" [label=" zxr1fcx2emewrxw,\nte",color=green] 
 }

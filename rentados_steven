@@ -1,0 +1,11 @@
+digraph  { 
+ nodesep=.05; 
+ rankdir=LR; 
+ node [shape=record,width=.5,height=2.5]; 
+ label="Reporte General"; 
+label=" Rentados de : steven"
+"0" [label=" qu5104umrtdhy81,\n D: Guatemala,E:max,\n T: 6, F: 20/05/2020,\n U: steven,\n A: chuco, : 0,\n A: qu5104umrtdhy81"] 
+"1" [label=" lopxc5ygvu42566,\n D: Guatemala,E:max,\n T: 8, F: 15/02/2020,\n U: steven,\n A: dell, : 0,\n A: lopxc5ygvu42566"] 
+
+"0" -> "1" 
+}

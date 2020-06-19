@@ -29,7 +29,7 @@
 	<iostream>
 	<string>
 
-1592519707 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceadmin.h
+1592529123 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceadmin.h
 	"Matriz.h"
 	"ListaDobleCircular.h"
 	"NodoMatriz.h"
@@ -38,7 +38,7 @@
 	<bits/stdc++.h>
 	<windows.h>
 
-1592518021 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\listadoblecircular.h
+1592525235 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\listadoblecircular.h
 	"NodoTransaccion.h"
 	<bits/stdc++.h>
 	<windows.h>
@@ -47,7 +47,7 @@
 	"NodoMatriz.h"
 	"NodoActivo.h"
 
-1592518125 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceuser.h
+1592523879 c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\include\interfaceuser.h
 	"Matriz.h"
 	"NodoMatriz.h"
 	"TreeAvl.h"
@@ -68,16 +68,13 @@
 1592480019 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\aletoriop.cpp
 	"AletorioP.h"
 
-1592503630 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceadmin.cpp
+1592529281 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceadmin.cpp
 	"InterfaceAdmin.h"
 	<iostream>
 	<string>
 
-1592518358 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceuser.cpp
+1592524171 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\interfaceuser.cpp
 	"InterfaceUser.h"
-
-1592518560 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\listadoblecircular.cpp
-	"ListaDobleCircular.h"
 
 1592511710 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\matriz.cpp
 	"Matriz.h"
@@ -95,4 +92,7 @@
 
 1592451387 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\treeavl.cpp
 	"TreeAvl.h"
+
+1592533294 source:c:\users\steven sis\documents\pruebas\cplusplus\rentaactivos_edd_p1\src\listadoblecircular.cpp
+	"ListaDobleCircular.h"
 

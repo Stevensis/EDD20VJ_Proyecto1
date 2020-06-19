@@ -103,7 +103,7 @@ void InterfaceUser::rentarActivo(){
         cout<<"... Ingrese fecha a rentar \n";
         getline(cin,fecha);
         rentado->estado=false;
-        this->transacciones->InsertarTransaccion(id,rentado,this->userE,fecha,dias,this->transacciones->primero,true,this->depar,this->empre);
+        this->transacciones->InsertarTransaccion(this->idActivo02(),rentado,this->userE,fecha,dias,this->transacciones->primero,true,this->depar,this->empre);
       //  this->transacciones->grafoGeneral();
     }else{
         cout<<"... No se encontro ID\n";
@@ -240,6 +240,26 @@ string InterfaceUser::idActivo(){
         id+=alphanum[num];
     }
     return id;
+}
+
+string InterfaceUser::idActivo02(){
+    int num, c;
+    NodoTransaccion* verificar;
+    srand(time(NULL));
+    string id2="";
+    string alphanum="0123456789abcdefghijklmnopqrstuvwxyz";
+    do{
+            id2="";
+       for(c = 0; c < 15; c++)
+    {
+        num = 0 + rand() % (alphanum.length() - 0);
+        id2+=alphanum[num];
+    }
+       verificar=this->transacciones->buscarTransicion02(id2);
+    }while(verificar!=NULL);
+
+
+    return id2;
 }
 InterfaceUser::~InterfaceUser()
 {

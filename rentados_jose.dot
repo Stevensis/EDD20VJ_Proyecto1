@@ -1,0 +1,11 @@
+digraph  { 
+ nodesep=.05; 
+ rankdir=LR; 
+ node [shape=record,width=.5,height=2.5]; 
+ label="Reporte General"; 
+label=" Rentados de : jose"
+"0" [label=" wke6fq7muhh9bso,\n D: Guatemala,E:max,\n T: 09, F: 01/01/2020,\n U: jose,\n A: panda, : 0,\n A: 5xyxippwclgi8ux"] 
+"1" [label=" j6s9tts3ki4w096,\n D: Guatemala,E:max,\n T: 08, F: 09/03/2020,\n U: jose,\n A: mac, : 0,\n A: ol895v9e5rkt35b"] 
+
+"0" -> "1" 
+}

@@ -31,6 +31,7 @@ class InterfaceUser
         void activosRentados02();
         void misActivosRentados();
         string idActivo();
+        string idActivo02();
         InterfaceUser(Matriz* ma,ListaDobleCircular* tra);
         virtual ~InterfaceUser();
 

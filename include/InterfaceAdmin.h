@@ -24,6 +24,8 @@ class InterfaceAdmin
         void activosxdepartemento();
         void transaccionesR();
         void activosxUsuario();
+        void rentadosxUsuario();
+        void ordenar();
         void graficar(string cuerpo,string nombre);
         InterfaceAdmin(Matriz* ma,ListaDobleCircular* lstCircular);
         virtual ~InterfaceAdmin();
