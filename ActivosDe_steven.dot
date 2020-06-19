@@ -1,14 +1,10 @@
 digraph G { 
 
- label=" User: steven"
+ label=" User: steven098"
 node [height=0.5, width=1.2];
-"8k4m8tuxpj990ff" [label=" 8k4m8tuxpj990ff,\nleche",color=green] 
-"o7y3bjsf0ckbz6l" [label=" o7y3bjsf0ckbz6l,\nte frio",color=green] 
-"o7y3bjsf0ckbz6l" -> "tj9n2bisk6xve1i" 
-"o7y3bjsf0ckbz6l" -> "8k4m8tuxpj990ff" 
-"tj9n2bisk6xve1i" [label=" tj9n2bisk6xve1i,\nChai",color=green] 
-"tnvjw88gq34fnmf" [label=" tnvjw88gq34fnmf,\ncafe",color=green] 
-"tnvjw88gq34fnmf" -> "zxr1fcx2emewrxw" 
-"tnvjw88gq34fnmf" -> "o7y3bjsf0ckbz6l" 
-"zxr1fcx2emewrxw" [label=" zxr1fcx2emewrxw,\nte",color=green] 
+"4f4lyrup0t3i676" [label=" 4f4lyrup0t3i676,\nazuca",color=green] 
+"iwfqsgvwauuxaj5" [label=" iwfqsgvwauuxaj5,\nleche",color=green] 
+"iwfqsgvwauuxaj5" -> "oet9l8l29dgu39z" 
+"iwfqsgvwauuxaj5" -> "4f4lyrup0t3i676" 
+"oet9l8l29dgu39z" [label=" oet9l8l29dgu39z,\njabon",color=green] 
 }

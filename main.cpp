@@ -16,7 +16,7 @@ int main()
     Matriz *matriz = new Matriz();
     ListaDobleCircular *transacciones = new ListaDobleCircular();
     AletorioP* a= new AletorioP(matriz);
-    matriz->insertarNodoMatriz("steven","max","Guatemala","steven","steven098",matriz->contadorN++);
+   /* matriz->insertarNodoMatriz("steven","max","Guatemala","steven","steven098",matriz->contadorN++);
     matriz->insertarNodoMatriz("pedro","intelaf","Xela","pedro","pedro098",matriz->contadorN++);
     matriz->insertarNodoMatriz("juan","chiquita","Xela","juan","juan098",matriz->contadorN++);
     matriz->insertarNodoMatriz("jose","max","Guatemala","jose","joses098",matriz->contadorN++);
@@ -47,7 +47,7 @@ int main()
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"cafe","el color");conta++;
     user4->treeAvl->root=user4->treeAvl->insertar(user4->treeAvl->root,a->idActivo(),"negra","tengo la camisa");conta++;
 
-
+*/
     InterfaceUser *user = new InterfaceUser(matriz,transacciones);
     InterfaceAdmin *admin = new InterfaceAdmin(matriz,transacciones);
 

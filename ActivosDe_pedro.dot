@@ -1,0 +1,8 @@
+digraph G { 
+
+ label=" User: pedro ordenez"
+node [height=0.5, width=1.2];
+"7y6buobahe00zpv" [label=" 7y6buobahe00zpv,\nacer",color=green] 
+"h3985aws4ev8cne" [label=" h3985aws4ev8cne,\ncomputadora",color=red] 
+"h3985aws4ev8cne" -> "7y6buobahe00zpv" 
+}

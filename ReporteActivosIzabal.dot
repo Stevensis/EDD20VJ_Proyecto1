@@ -1,0 +1,17 @@
+digraph G { 
+
+ label="Departamento: Izabal " 
+
+ subgraph cluster_0 { 
+
+ label="Usuario pedro ordenez \n pedro " 
+node [height=0.5, width=1.2];
+"7y6buobahe00zpv" [label=" 7y6buobahe00zpv,\nacer",color=green] 
+"h3985aws4ev8cne" [label=" h3985aws4ev8cne,\ncomputadora",color=red] 
+"h3985aws4ev8cne" -> "7y6buobahe00zpv" 
+}
+ subgraph cluster_1 { 
+
+ label="Usuario kevin lopez \n kevin " 
+node [height=0.5, width=1.2];
+}}

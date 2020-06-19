@@ -4,29 +4,24 @@ digraph G {
 
  subgraph cluster_0 { 
 
- label="Usuario steven \n steven " 
+ label="Usuario steven098 \n steven " 
 node [height=0.5, width=1.2];
-"f8vt9nh5rr3kxij" [label=" f8vt9nh5rr3kxij,\nte frio",color=green] 
-"h7d3s94f7hkc6a4" [label=" h7d3s94f7hkc6a4,\nleche",color=green] 
-"h7d3s94f7hkc6a4" -> "f8vt9nh5rr3kxij" 
-"ibukoh85aba9zew" [label=" ibukoh85aba9zew,\nte",color=green] 
-"ibukoh85aba9zew" -> "y1watnycgcf4iq3" 
-"ibukoh85aba9zew" -> "h7d3s94f7hkc6a4" 
-"mv2s089gy1fjtbu" [label=" mv2s089gy1fjtbu,\nChai",color=green] 
-"y1watnycgcf4iq3" [label=" y1watnycgcf4iq3,\ncafe",color=green] 
-"y1watnycgcf4iq3" -> "mv2s089gy1fjtbu" 
+"4f4lyrup0t3i676" [label=" 4f4lyrup0t3i676,\nazuca",color=green] 
+"iwfqsgvwauuxaj5" [label=" iwfqsgvwauuxaj5,\nleche",color=green] 
+"iwfqsgvwauuxaj5" -> "oet9l8l29dgu39z" 
+"iwfqsgvwauuxaj5" -> "4f4lyrup0t3i676" 
+"oet9l8l29dgu39z" [label=" oet9l8l29dgu39z,\njabon",color=green] 
 }
  subgraph cluster_1 { 
 
- label="Usuario jose \n jose " 
+ label="Usuario pedro ordenez \n pedro " 
 node [height=0.5, width=1.2];
-"51pb0ypocpo1b8c" [label=" 51pb0ypocpo1b8c,\nAzul",color=green] 
-"51pb0ypocpo1b8c" -> "77c2gsfke95q0as" 
-"77c2gsfke95q0as" [label=" 77c2gsfke95q0as,\ncafe",color=green] 
-"desw3t234iq2rcw" [label=" desw3t234iq2rcw,\nnaranja",color=green] 
-"desw3t234iq2rcw" -> "lmwmzlqu99ycdz9" 
-"desw3t234iq2rcw" -> "51pb0ypocpo1b8c" 
-"g0gvvynxcogtlfy" [label=" g0gvvynxcogtlfy,\nnegra",color=green] 
-"lmwmzlqu99ycdz9" [label=" lmwmzlqu99ycdz9,\nrojo",color=green] 
-"lmwmzlqu99ycdz9" -> "g0gvvynxcogtlfy" 
+"7y6buobahe00zpv" [label=" 7y6buobahe00zpv,\nacer",color=green] 
+"h3985aws4ev8cne" [label=" h3985aws4ev8cne,\ncomputadora",color=red] 
+"h3985aws4ev8cne" -> "7y6buobahe00zpv" 
+}
+ subgraph cluster_2 { 
+
+ label="Usuario kevin lopez \n kevin " 
+node [height=0.5, width=1.2];
 }}
